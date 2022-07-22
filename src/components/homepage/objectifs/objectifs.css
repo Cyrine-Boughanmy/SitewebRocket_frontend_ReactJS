@@ -1,0 +1,117 @@
+.objectifs-section {
+    background-color: #004AAD;
+    color: #fff;
+    padding: 160px 0;
+  }
+  .objectifs-row {
+    margin-top: -60px;
+    align-items: center;
+    display: flex;
+    margin-right: -15px;
+    margin-bottom: -15px;
+    margin-left: -15px;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  
+  
+  .objectifs-col {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 1;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  
+  .objectifs-text-wrapper {
+    padding-top: 0;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .objectifs-heading {
+    left: 50%;
+    margin-bottom: 24px;
+    color: #f7f8fa;
+    font-family: 'Inter';
+    font-style: Semi Bold;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    width: 540px;
+  }
+  .objectifs-subtitle {
+    max-width: 480px;
+    margin-bottom: 35px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+
+    letter-spacing: 0.02em;
+
+  }
+  
+  .objectifs-img-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .objectifs-img {
+    max-width: 100%;
+    margin-top: 0;
+    margin-right:auto;
+    margin-left: auto;
+    padding-right: 0;
+    margin-bottom:30px ;
+  }
+  .objectifs-btn{
+    text-align: center;
+  }
+ 
+  
+  @media screen and (max-width: 991px) {
+    .container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .objectifs-text-wrapper {
+      padding-bottom: 65px;
+    }
+  
+    .objectifs-col {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+    .objectifs-img-wrapper{
+        width: 100%;
+    }
+    .objectifs-btn{
+        text-align: center;
+        padding: 20px;
+      }
+      .objectifs-heading {
+        left: 50%;
+        margin-bottom: 24px;
+        
+        color: #f7f8fa;
+        font-family: 'Inter';
+        font-style: Semi Bold;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        width: 540px;
+      }
+    
+  }

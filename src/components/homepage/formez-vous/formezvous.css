@@ -1,0 +1,59 @@
+.home{
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.text-titlel {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    margin-top: 40px;
+
+    color: #004AAD;
+    }
+    .text-descriptionl{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #004AAD;
+    }
+    .btn-infosessionf{
+    background: #97BFFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    width: 370px;
+    height: 57px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    color: #000000;
+    margin-right: 100px;
+    }
+    .img-acc{
+  box-sizing: border-box;
+    
+    position: absolute;
+    width: 722px;
+    height: 468px;
+    left: 793px;
+    top: 139px;
+    border: 10px solid #97BFFC;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 100px;
+    
+    }
+@media screen and (max-width:940px) {
+    .home {
+        height:auto;
+        max-width: 100%;
+        
+    }
+    }

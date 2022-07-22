@@ -1,0 +1,113 @@
+:root {
+    --white: #fff;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  .btn--white {
+    background-color: var(--white);
+    color: #004AAD;
+    border: 1px solid var(--white);
+  }
+  
+  
+  
+  .btn--medium {
+    padding: 8px 20px;
+    font-size: 18px;
+  }
+  
+  .btn--large {
+    padding: 12px 26px;
+    font-size: 20px;
+  }
+  
+  .btn--mobile {
+    text-align: center;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: 004AAD;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btn--wide {
+    padding: 10px 62px;
+    font-size: 20px;
+  }
+  
+  .btn--large:hover,
+  .btn--medium:hover,
+  .btn--mobile:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #004AAD;
+  }
+  
+  .btn--wide:hover {
+    color: #000000;
+    background-color: #ffff;
+    transition: all 0.2s ease-out;
+  }
+  
+  .btn-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 16px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .lightblue {
+    background-color: #97BFFC;
+    color: #000000;
+    border: none;
+  }
+  
+  .primary {
+    background-color: #E5D011;
+    color: #000000;
+    border: none;
+  }
+  
+  .white {
+    background-color: #242424;
+    color: #fff;
+    border: none;
+  }
+  
+  .primary:hover {
+    background-color: #fff;
+    color: #E5D011;
+    border: none;
+  }
+ 
+  @media screen and (max-width: 768px) {
+  .btn {
+    padding: 8px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    margin:20px;
+    width: 100%;
+  }}
+  
+  
