@@ -45,7 +45,6 @@
     width: 540px;
   }
   .objectifs-subtitle {
-    max-width: 480px;
     margin-bottom: 35px;
     font-family: 'Inter';
     font-style: normal;
@@ -101,9 +100,7 @@
         padding: 20px;
       }
       .objectifs-heading {
-        left: 50%;
         margin-bottom: 24px;
-        
         color: #f7f8fa;
         font-family: 'Inter';
         font-style: Semi Bold;
@@ -111,7 +108,7 @@
         font-size: 48px;
         line-height: 58px;
         text-align: center;
-        width: 540px;
+        width: 100%;
       }
     
   }

@@ -8,7 +8,6 @@
     outline: none;
     border: none;
     cursor: pointer;
-    white-space: nowrap;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -105,9 +104,8 @@
     outline: none;
     border: none;
     cursor: pointer;
-    white-space: nowrap;
-    margin:20px;
     width: 100%;
+    text-align: center;
   }}
   
   
