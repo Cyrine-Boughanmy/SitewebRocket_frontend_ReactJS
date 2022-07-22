@@ -29,7 +29,9 @@ function Section({
             }}
           >
             <div className='col'>
-              <div className='home__hero-text-wrapper'>
+              <div className='home__hero-text-wrapper'
+              
+              >
                 <h1 className={lightText ? 'heading' : 'heading dark'}>
                   {headline}
                 </h1>
@@ -51,7 +53,11 @@ function Section({
             </div>
             <div className='col'>
               <div className='home__hero-img-wrapper'>
-                <img src={img} alt={alt} className='home__hero-img' />
+                <img src={img} alt={alt} className='home__hero-img'
+                style={{
+                  marginLeft : imgStart==='start' ? '-210px' : '216px'
+                 }}
+                />
               </div>
             </div>
           </div>
