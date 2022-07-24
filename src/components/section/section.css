@@ -38,7 +38,7 @@
     margin-bottom: 24px;
     color: #f7f8fa;
     font-family: 'Inter';
-    font-style: Semi Bold;
+    font-style: normal;
     font-weight: 900;
     font-size: 48px;
     line-height: 58px;
@@ -57,7 +57,7 @@
     margin-bottom: 35px;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 24px;
     line-height: 32px;
     /* or 133% */
@@ -74,7 +74,7 @@
     max-width: 100%;
     margin-top: 0;
     margin-right: 0;
-    margin-left: 10px;
+    margin-left: 10px;   
     padding-right: 0;
     border: 10px solid #97BFFC;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -97,7 +97,7 @@
   @media screen and (max-width: 991px) {
     .home__hero-section{
 
-      max-width: 100%;;
+      max-width: 100%;
     }
     .container {
       max-width: 100%;
@@ -105,6 +105,10 @@
       padding-left: 30px;
       
     }
+    .home__hero-img {
+      display: none;
+    }
+    
   }
   
   @media screen and (max-width: 768px) {

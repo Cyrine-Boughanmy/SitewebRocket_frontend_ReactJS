@@ -4,6 +4,8 @@ import Formezvous from './formez-vous/formezvous';
 import Objectifs from './objectifs/objectifs';
 import Pourquoiunbootcamp from './pourquoiunbootcamp/pourquoiunbootcamp';
 import Pourquoirocketcoding from './pourquoirocketcoding/pourquoirocketcoding';
+import Programme from '../programme/Programme';
+import Stackdedeveloppement from './stackdedevloppement/stackdedeveloppement';
 
 
 
@@ -16,6 +18,8 @@ const Home = () => {
   <Objectifs/>
   <Pourquoiunbootcamp/>
   <Pourquoirocketcoding/>
+  <Programme/>
+  <Stackdedeveloppement/>
 </div>
   )
   

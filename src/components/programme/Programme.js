@@ -1,10 +1,10 @@
 import React from 'react';
+import { pageprogramme } from '../homepage/pages';
+import Section from '../section/section';
 
 const Programme = () => {
   return (
-    <div>
-      <h1>Programme</h1>
-    </div>
+    <Section {...pageprogramme}/>
   );
 }
 

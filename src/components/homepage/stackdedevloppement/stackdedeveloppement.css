@@ -1,9 +1,9 @@
-.prqrocketcoding-section {
+.stackdev-section {
     background-color: #004AAD;
     color: #fff;
     padding: 160px 0;
   }
-  .prqrocketcoding-row {
+  .stackdev-row {
     margin-top: -60px;
     align-items: center;
     display: flex;
@@ -15,7 +15,7 @@
   }
   
   
-  .prqrocketcoding-col {
+  .stackdev-col {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -26,14 +26,14 @@
     flex-basis: 50%;
   }
   
-  .prqrocketcoding-text-wrapper {
+  .stackdev-text-wrapper {
     
     padding-top: 0;
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
   }
-  .prqrocketcoding-heading {
+  .stackdev-heading {
     margin-bottom: 30px;
     color: #f7f8fa;
     font-family: 'Inter';
@@ -44,7 +44,7 @@
     text-align: center;
     width: 100%;
   }
-  .prqrocketcoding-subtitle {
+  .stackdev-subtitle {
     max-width: 480px;
     margin-bottom: 35px;
     font-family: 'Inter';
@@ -61,14 +61,14 @@
 
   }
   
-  .prqrocketcoding-img-wrapper {
+  .stackdev-img-wrapper {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top:10px;
   }
   
-  .prqrocketcoding-img {
+  .stackdev-img {
     max-width: 110%;
     margin-top: 0;
     margin-right: auto;
@@ -81,6 +81,28 @@
     height: 405px;
     padding:0px;
     }
+    .card{
+      border: 10px solid #fff;
+      background: #97BFFC;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      height: 316px;
+      color : #004AAD;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 58px;
+      text-align: center;
+    }
+    .slick-slide > div{
+      margin : 5px 20px;
+    }
+    .slick-list{
+      margin : 0 -20px;
+
+
+    }
   
  
   
@@ -92,18 +114,18 @@
   }
   
   @media screen and (max-width: 768px) {
-    .prqrocketcoding-text-wrapper {
+    .stackdev-text-wrapper {
       padding-bottom: 65px;
     }
   
-    .prqrocketcoding-col {
+    .stackdev-col {
       max-width: 100%;
       flex-basis: 100%;
     }
-    .prqrocketcoding-img-wrapper{
+    .stackdev-img-wrapper{
         width: 100%;
     }
-    .prqrocketcoding-img{
+    .stackdev-img{
         width: 100%;
 
     }

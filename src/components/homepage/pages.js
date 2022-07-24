@@ -1,6 +1,7 @@
 import accimg from '../../images/devenezdeveloppeur.jpg';
 import fvimg from '../../images/formezvous.jpg';
 import prqfaire from '../../images/pourquoifaire.jpg';
+import pageprog from '../../images/programme.jpg';
 
 export const header = {
     lightBg: false,
@@ -39,5 +40,17 @@ export const header = {
     imgStart: 'start',
     img: prqfaire,
     alt: 'pourquoi faire le Bootcamp'
+  };
+  export const pageprogramme = {
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    headline: 'Un programme dispensé par des experts en programmation',
+    description:
+      "Notre objecitf numéro un est d’aider nos Rocketers à monter en compétences dans le domaine de la programmation informatique le plus rapidement possible. Nos experts en programmation proposereont des cas pratiques concernant les notions apprises, pour s’assurer de leur bonne compréhension. ",
+    buttonLabel: 'Télécharger le programme',
+    imgStart: '',
+    img: pageprog,
+    alt: 'programme de la formation'
   };
   
