@@ -4,12 +4,8 @@
     padding: 160px 0;
   }
   .stackdev-row {
-    margin-top: -60px;
     align-items: center;
     display: flex;
-    margin-right: -15px;
-    margin-bottom: -15px;
-    margin-left: -15px;
     flex-wrap: wrap;
     align-content: stretch;
   }
@@ -22,7 +18,7 @@
     padding-right: 15px;
     padding-left: 15px;
     flex: 1;
-    max-width: 50%;
+    max-width: 70%;
     flex-basis: 50%;
   }
   
@@ -61,26 +57,9 @@
 
   }
   
-  .stackdev-img-wrapper {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:10px;
-  }
+
   
-  .stackdev-img {
-    max-width: 110%;
-    margin-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    margin-bottom:30px ;
-    border: 10px solid #97BFFC;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
-    height: 405px;
-    padding:0px;
-    }
+  
     .card{
       border: 10px solid #fff;
       background: #97BFFC;
@@ -88,12 +67,7 @@
       border-radius: 20px;
       height: 316px;
       color : #004AAD;
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 58px;
-      text-align: center;
+      
     }
     .slick-slide > div{
       margin : 5px 20px;
@@ -102,6 +76,29 @@
       margin : 0 -20px;
 
 
+    }
+    .card-bottom h1 {
+      margin : 20px 20px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 58px;
+      text-align: center;
+
+    }
+    .card-top > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-top: -10px;
+
+      
+
+    }
+    .card-bottom{
+      margin: 10px 20px;
     }
   
  
