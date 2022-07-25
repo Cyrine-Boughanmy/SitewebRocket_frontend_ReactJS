@@ -27,7 +27,6 @@ const Home = () => {
   <Tarif/>
   <Prochainesréunions/>
   <Prochainessessions/>
-  <Contact/>
   
 </div>
   )
