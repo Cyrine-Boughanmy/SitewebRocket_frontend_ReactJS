@@ -1,8 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Button } from '../button/Button';
-import './Tarif.css';
-import { listetarif } from './listetarif';
+import { Button } from '../../button/Button';
+import './prochainessessions.css';
+import { listesessions } from './listesessions';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -13,7 +13,7 @@ const breakPoints = [
 
 
 
-const Tarif = () => {
+const Prochainessessions = () => {
 
     const settings = {
         dots: true,
@@ -55,48 +55,44 @@ const Tarif = () => {
     return (
         <>
           <div
-            className='tarif-section' >
+            className='session-section' >
             <div className='container'>
               <div
-                className='row tarif-row'
+                className='row session-row'
                 style={{
                   display: 'flex',
                  
                 }}
               >
-                   <div className='tarif-text-wrapper'>
-                    <h1 className= 'tarif-heading' >
-                    Tarif du Bootcamp
-                    </h1>
+                   <div className='session-text-wrapper'>
+                    <h1 className= 'session-heading' >
+                    Prochaines sessions du Bootcamp                    </h1>
                     <p
                       className=
-                        'tarif-subtitle' >
-                      Cette formation à temps plein, intensive d’une durée de dix semaines, vous offre la possibilté de vous former depuis chez vous au métier de Développeur Full Stack
-                    </p>
+                        'session-subtitle' >
+Cette formation à temps plein, intensive d’une durée de dix semaines, vous offre la possibilté de vous former depuis chez vous au métier de Développeur Full Stack                    </p>
                    
                   </div>
-                <div className='tarif-col'>
+                <div className='session-col'>
               
                 <Slider {...settings}>
-                    {listetarif.map((item) => (
-                        <div className='tarif-card'>
-                        <div className='tarif-card-top'>
+                    {listesessions.map((item) => (
+                        <div className='session-card'>
+                        <div className='session-card-top'>
                           <img src={item.img} alt={item.alt}/>
                           
                         </div>
-                        <div className='tarif-card-bottom'>
-                          <div className='tarif-title'>
+                        <div className='session-card-bottom'>
+                          <div className='session-title'>
                             <h2>{item.titre}</h2>
                           </div>
-                           <div className='tarif-desc'>
+                           <div className='session-desc'>
                             <p>{item.desc}</p>
                            </div>
-                           <div className='tarif'>
-                            <h6>{item.tarif}</h6>
-                           </div>
-                           <div className='tarif-btn'>
+                           
+                           <div className='session-btn'>
                                 {/* <Link to='/sign-up'>*/}
-                                <Button buttonSize='btn--medium' buttonColor='primary' >
+                                <Button buttonSize='btn--medium' buttonColor='white' >
                                 Télécharger le programme
                                 </Button>
                             </div>
@@ -116,4 +112,4 @@ const Tarif = () => {
         </>
       );
     }
-export default Tarif;
+export default Prochainessessions;

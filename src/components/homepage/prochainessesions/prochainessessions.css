@@ -1,9 +1,9 @@
-.tarif-section {
+.session-section {
     background-color: #fff ;
     color: #004AAD;
     padding: 160px 0;
   }
-  .tarif-row {
+  .session-row {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +11,7 @@
   }
   
   
-  .tarif-col {
+  .session-col {
     margin-left: auto;
     margin-bottom: 15px;
     padding-left: 15px;
@@ -20,13 +20,13 @@
     flex-basis: 50%;
   }
   
-  .tarif-text-wrapper {
+  .session-text-wrapper {
     padding-top: 0;
     padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
   }
-  .tarif-heading {
+  .session-heading {
     margin-bottom: 30px;
     color: #004AAD;
     font-family: 'Inter';
@@ -37,7 +37,7 @@
     text-align: center;
     width: 100%;
   }
-  .tarif-subtitle {
+  .session-subtitle {
     max-width: 550px;
     margin-bottom: 35px;
     font-family: 'Inter';
@@ -52,7 +52,7 @@
     margin-top: 6px;
   }
 
-  .tarif-card{
+  .session-card{
     border: 10px solid #fff;
     background:  #004AAD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -71,7 +71,7 @@
 
 
   }
-  .tarif-card-top > img {
+  .session-card-top > img {
     width: 100%;
     height: 5rem;
     object-fit: fill;
@@ -81,21 +81,21 @@
     
 
   }
-  .tarif-card-bottom{
+  .session-card-bottom{
     text-align: center;
 
   }
-  .tarif-btn{
+  .session-btn{
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
-  .tarif-card-bottom{
+  .session-card-bottom{
     margin: 10px 20px;
 
   }
  
-   .tarif-title h2{
+   .session-title h2{
     color: #f7f8fa;
     font-family: 'Inter';
     font-style: normal;
@@ -103,13 +103,13 @@
     line-height: 5px;
   }
 
-.tarif-desc p{
+.session-desc p{
     color: #f7f8fa;
     font-family: 'Inter';
     font-style: normal;
     font-size: 15px;
 }
-.tarif h6{
+.session h6{
     color: #f7f8fa;
     font-family: 'Inter';
     font-style: normal;
@@ -131,7 +131,7 @@
   @media screen and (max-width: 768px) {
    
   
-    .tarif-col {
+    .session-col {
       max-width: 100%;
       flex-basis: 100%;
     }

@@ -1,0 +1,130 @@
+.reunionsdev-section {
+    background-color: #004AAD;
+    color: #fff;
+    padding: 160px 0;
+  }
+  .reunionsdev-row {
+    margin-top: -60px;
+    align-items: center;
+    display: flex;
+    margin-right: -15px;
+    margin-bottom: -15px;
+    margin-left: -15px;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  
+  
+  .reunionsdev-col {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 1;
+    flex-basis: 50%;
+  }
+  
+  .reunionsdev-text-wrapper {
+    
+    padding-top: 0;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reunionsdev-heading {
+    margin-bottom: 30px;
+    color: #f7f8fa;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 58px;
+    text-align: center;
+    width: 100%;
+  }
+  .reunionsdev-subtitle {
+    max-width: 550px;
+    margin-bottom: 35px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    letter-spacing: 0.02em;
+    margin-top: 6px;
+
+  }
+  
+  .reunionsdev-img-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+  }
+  
+  .reunionsdev-img {
+    max-width: 110%;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    margin-bottom:30px ;
+    border: 10px solid #97BFFC;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    height: 405px;
+    padding:0px;
+    }
+    .card{
+      border: 10px solid #fff;
+      background: #97BFFC;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      height: 316px;
+      color : #004AAD;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 58px;
+      text-align: center;
+    }
+    .slick-slide > div{
+      margin : 5px 20px;
+    }
+    .slick-list{
+      margin : 0 -20px;
+
+    }
+  
+ 
+  
+  @media screen and (max-width: 991px) {
+    .container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .reunionsdev-text-wrapper {
+      padding-bottom: 65px;
+    }
+  
+    .reunionsdev-col {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+    .reunionsdev-img-wrapper{
+        width: 100%;
+    }
+    .reunionsdev-img{
+        width: 100%;
+    }
+    
+    
+  }

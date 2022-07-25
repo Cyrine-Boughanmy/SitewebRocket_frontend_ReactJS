@@ -1,0 +1,19 @@
+.contact-section{
+    background-color: #004AAD ;
+    color: #fff;
+    padding: 160px 0;
+}
+.contact-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+.contact-text-wrapper .contact-heading h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 58px;
+    text-align: center;
+    width: 100%;
+}

@@ -8,6 +8,8 @@ import Programme from '../programme/Programme';
 import Stackdedeveloppement from './stackdedevloppement/stackdedeveloppement';
 import Tarif from '../tarif/Tarif';
 import Prochainesréunions from './prochainesréunions/prochainesréunions';
+import Prochainessessions from './prochainessesions/prochainessessions';
+import Contact from '../contact/contact';
 
 
 
@@ -22,6 +24,10 @@ const Home = () => {
   <Pourquoirocketcoding/>
   <Programme/>
   <Stackdedeveloppement/>
+  <Tarif/>
+  <Prochainesréunions/>
+  <Prochainessessions/>
+  <Contact/>
   
 </div>
   )

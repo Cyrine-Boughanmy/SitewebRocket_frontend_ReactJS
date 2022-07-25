@@ -86,14 +86,13 @@
   }
   
   .white {
-    background-color: #242424;
-    color: #fff;
+    background-color: #fff;
+    color: #004AAD;
     border: none;
   }
   
   .primary:hover {
     background-color: #fff;
-    color: #E5D011;
     border: none;
   }
  
