@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import { Button } from '../button/Button';
 import './Tarif.css';
 import { listetarif } from './listetarif';
+import { Link } from 'react-router-dom';
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -76,7 +78,21 @@ const Tarif = () => {
                    
                   </div>
                 <div className='tarif-col'>
-                <div className='stack-slider'>
+
+                 <div className='tarif-img-wrapper'>
+                 {listetarif.map((item) => (
+                  <img src={item.img} alt='tarif' className='tarif-img'/>
+                  ))}
+                  </div>
+                  <div className='objectifs-btn'>
+                    <Link to='/contactform'>
+                    <Button buttonSize='btn--medium' buttonColor='primary' >
+                      Je postule au Bootcamp
+                    </Button>
+                  </Link>
+                  </div>
+
+                {/* <div className='stack-slider'>
                 <Slider {...settings}>
                     {listetarif.map((item) => (
                         <div className='tarif-card'>
@@ -95,7 +111,7 @@ const Tarif = () => {
                             <h6>{item.tarif}</h6>
                            </div>
                            <div className='tarif-btn'>
-                                {/* <Link to='/sign-up'>*/}
+                                <Link to='/sign-up'>
                                 <Button buttonSize='btn--medium' buttonColor='primary' >
                                 Télécharger le programme
                                 </Button>
@@ -104,7 +120,7 @@ const Tarif = () => {
                         </div>
                     ))}
                     </Slider>
-                </div>
+                </div> */}
                     
                 </div>
                 

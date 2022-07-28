@@ -92,6 +92,45 @@
       line-height: 58px;
       text-align: center;
     }
+    .reuniondev-card-top{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: -10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 58px;
+    text-align: center;
+}
+    .reuniondev-card-top  h2{
+      margin-top: 25%;
+      color : #004AAD;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 58px;
+      text-align: center;
+    }
+    .reuniondev-card-text-wrapper{
+      margin-top: 20px;
+    }
+    .reuniondev-card-bottom h2 {
+      margin-top: 10%;
+      color : #004AAD;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 58px;
+      text-align: center;
+    }
+
+
     .slick-slide > div{
       margin : 5px 20px;
     }

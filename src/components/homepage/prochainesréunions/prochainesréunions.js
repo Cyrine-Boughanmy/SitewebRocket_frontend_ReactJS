@@ -74,12 +74,13 @@ const Prochainesréunions = () => {
                     <Slider {...settings}>
                     {reunions.map((item) => (
                         <div className='card'>
-                        <div className='card-top'>
-                          <img src={item.img} alt={item.alt}/>
-                          
+                        <div className='reuniondev-card-top'>
+                          <div className='reuniondev-card-text-wrapper'>
+                          <h2>{item.date}</h2>
+                          </div>
                         </div>
-                        <div className='card-bottom'>
-                            <h1>{item.titre}</h1>
+                        <div className='reuniondev-card-bottom'>
+                            <h2>{item.jour} {item.heure}</h2>
                         </div>   
                         </div>
                     ))}

@@ -12,6 +12,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 
 const navigationLinks = [
+  
   { name: "Programme", href: "/programme" },
   { name: "Tarif", href: "/tarif" },
   { name: "Contact", href: "/contactform" },
@@ -81,8 +82,8 @@ const Navbar = () => {
           component="a"
           href="/"
           
-          sx={{ marginRight:'20px',fontFamily:'Inter', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center" ,marginTop:"6px" , textDecoration:"none"}}>
-                Rocket Coding Bootcamp
+          sx={{ marginRight:'20px',fontFamily:'Inter', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
+                Rocket Coding 
           </Typography>
           <Typography >
             {navigationLinks.map((item) => (
@@ -138,12 +139,24 @@ const Navbar = () => {
         </div>
         <Divider />
         <List>
+        <ListItem>
+          <Link
+                sx={{marginRight:"20px"}}
+                className={styles.link}
+                color="textPrimary"
+                underline="none"
+                href="/"
+              
+              >
+                Rocket Coding
+              </Link>
+          </ListItem>
           {navigationLinks.map((item) => (
             <ListItem key={item.name}>
               <Link
                 className={styles.link}
                 color="textPrimary"
-                variant="button"
+                
                 underline="none"
                 href={item.href}
               >

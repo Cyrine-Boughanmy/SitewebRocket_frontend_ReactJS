@@ -1,45 +1,13 @@
-import pythonimg from '../../images/python.jpg';
-
+import tarifimg from '../../images/tarifimage.png';
 
 export const listetarif =[
     {
     id: 1,    
-    img: '',
+    img: tarifimg,
     alt: 'tarif',
     titre:'titre',
     desc:'description',
     tarif:'tarif desc'
     
-
-},
-{
-    id:2,
-    img:'',
-    alt: 'tarif',
-    titre:'titre',
-    desc:'description',
-    tarif:'tarif desc'
-
-
-},
-{
-    id:3,
-    img:'',
-    alt: 'tarif',
-    titre:'titre',
-    desc:'description',
-    tarif:'tarif desc'
-
-
-},
-{
-    id:4,
-    img:'',
-    alt: 'tarif',
-    titre:'titre',
-    desc:'description',
-    tarif:'tarif desc'
-
-
 }
 ]

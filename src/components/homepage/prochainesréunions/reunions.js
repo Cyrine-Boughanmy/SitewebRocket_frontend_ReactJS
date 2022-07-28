@@ -1,31 +1,31 @@
 export const reunions =[
     {
     id: 1,    
-    img: '',
-    alt: '',
-    titre : 'réunion 1'
+    date : '31/12/2022',
+    jour : 'Lundi',
+    heure : '18h'
 },
 {
     id:2,
-    img: '',
-    alt: '',
-    titre : 'réunion 2'
+    date : '31/12/2022',
+    jour : 'Lundi',
+    heure : '18h'
 },
 {
     id : 3,
-    img: '',
-    alt: '',
-    titre : 'réuninon 3'
+    date : '31/12/2022',
+    jour : 'Lundi',
+    heure : '18h'
 },
 {
     id : 4,
-    img: '',
-    alt: '',
-    titre : 'réuninon 4'
+    date : '31/12/2022',
+    jour : 'Lundi',
+    heure : '18h'
 },
 {
     id : 5,
-    img: '',
-    alt: '',
-    titre : 'réunion 5'
+    date : '31/12/2022',
+    jour : 'Lundi',
+    heure : '18h'
 }]
