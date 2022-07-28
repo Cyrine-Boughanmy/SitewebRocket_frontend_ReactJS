@@ -3,6 +3,8 @@ import React from 'react';
 import './prochainesréunions.css';
 import Slider from "react-slick";
 import { reunions } from './reunions';
+import { Link } from 'react-router-dom';
+import { Button } from '../../button/Button';
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -85,6 +87,13 @@ const Prochainesréunions = () => {
                     
                     
                     
+                  </div>
+                  <div className='stack-btn'>
+                    <Link to='/programme'>
+                    <Button buttonSize='btn--wide' buttonColor='lightblue' >
+                      consulter le programme
+                    </Button>
+                  </Link>
                   </div>
                 
               

@@ -3,6 +3,8 @@ import React from 'react';
 import './stackdedeveloppement.css';
 import Slider from "react-slick";
 import { stack } from './stack';
+import { Button } from '../../button/Button';
+import { Link } from 'react-router-dom';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -90,7 +92,14 @@ const Stackdedeveloppement = () => {
                     
                     
                   </div>
-                
+
+                <div className='stack-btn'>
+                  <Link to='/programme'>
+                    <Button buttonSize='btn--wide' buttonColor='lightblue' >
+                      consulter le programme
+                    </Button>
+                  </Link>
+                  </div>
               
                   
                 </div>

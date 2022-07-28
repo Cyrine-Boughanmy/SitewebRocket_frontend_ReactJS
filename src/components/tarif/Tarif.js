@@ -76,7 +76,7 @@ const Tarif = () => {
                    
                   </div>
                 <div className='tarif-col'>
-              
+                <div className='stack-slider'>
                 <Slider {...settings}>
                     {listetarif.map((item) => (
                         <div className='tarif-card'>
@@ -104,7 +104,7 @@ const Tarif = () => {
                         </div>
                     ))}
                     </Slider>
-                
+                </div>
                     
                 </div>
                 

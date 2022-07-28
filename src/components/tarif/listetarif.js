@@ -21,4 +21,25 @@ export const listetarif =[
     tarif:'tarif desc'
 
 
-}]
+},
+{
+    id:3,
+    img:'',
+    alt: 'tarif',
+    titre:'titre',
+    desc:'description',
+    tarif:'tarif desc'
+
+
+},
+{
+    id:4,
+    img:'',
+    alt: 'tarif',
+    titre:'titre',
+    desc:'description',
+    tarif:'tarif desc'
+
+
+}
+]

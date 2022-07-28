@@ -23,7 +23,7 @@
   
   .btn--medium {
     padding: 8px 20px;
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .btn--large {
@@ -38,9 +38,9 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: 004AAD;
+    color: #004AAD;
     padding: 14px 20px;
-    border: 1px solid #fff;
+    border: 1px solid #004AAD;
     transition: all 0.3s ease-out;
   }
   
@@ -53,7 +53,7 @@
   .btn--medium:hover,
   .btn--mobile:hover {
     transition: all 0.3s ease-out;
-    background: #fff;
+    background-color: #fff;
     color: #004AAD;
   }
   
@@ -81,7 +81,7 @@
   
   .primary {
     background-color: #E5D011;
-    color: #000000;
+    color: #004AAD;
     border: none;
   }
   
@@ -97,14 +97,11 @@
   }
  
   @media screen and (max-width: 768px) {
-  .btn {
-    padding: 8px 20px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-  }}
-  
+    .btn {
+      padding: 8px 20px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }}
   

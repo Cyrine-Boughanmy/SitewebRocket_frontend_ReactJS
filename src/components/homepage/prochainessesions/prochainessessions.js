@@ -74,7 +74,7 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                    
                   </div>
                 <div className='session-col'>
-              
+                <div className='stack-slider'>
                 <Slider {...settings}>
                     {listesessions.map((item) => (
                         <div className='session-card'>
@@ -100,7 +100,7 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                         </div>
                     ))}
                     </Slider>
-                
+                </div>
                     
                 </div>
                 

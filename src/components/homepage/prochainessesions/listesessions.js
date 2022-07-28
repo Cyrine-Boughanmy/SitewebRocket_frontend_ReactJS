@@ -19,4 +19,23 @@ export const listesessions=[
     desc:'description',
 
 
-}]
+},
+{
+    id:3,
+    img:'',
+    alt: 'session',
+    titre:'titre',
+    desc:'description',
+
+
+},
+{
+    id:4,
+    img:'',
+    alt: 'session',
+    titre:'titre',
+    desc:'description',
+
+
+}
+]

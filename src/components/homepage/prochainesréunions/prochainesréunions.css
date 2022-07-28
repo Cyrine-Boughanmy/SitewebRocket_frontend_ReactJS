@@ -1,12 +1,11 @@
 .reunionsdev-section {
     background-color: #004AAD;
     color: #fff;
-    padding: 160px 0;
+    padding: 100px 0;
   }
   .reunionsdev-row {
     margin-top: -60px;
     align-items: center;
-    display: flex;
     margin-right: -15px;
     margin-bottom: -15px;
     margin-left: -15px;
@@ -105,14 +104,20 @@
   
   @media screen and (max-width: 991px) {
     .container {
-      padding-right: 30px;
       padding-left: 30px;
+      padding-right: 30px;
+
     }
   }
   
   @media screen and (max-width: 768px) {
     .reunionsdev-text-wrapper {
       padding-bottom: 65px;
+    }
+    .container{
+    padding-left: 30px;
+    padding-right: 30px;
+
     }
   
     .reunionsdev-col {

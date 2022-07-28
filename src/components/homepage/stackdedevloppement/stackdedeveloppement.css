@@ -1,7 +1,7 @@
 .stackdev-section {
     background-color: #004AAD;
     color: #fff;
-    padding: 160px 0;
+    padding: 100px 0;
   }
   .stackdev-row {
     align-items: center;
@@ -41,7 +41,6 @@
     width: 100%;
   }
   .stackdev-subtitle {
-    max-width: 550px;
     margin-bottom: 35px;
     font-family: 'Inter';
     font-style: normal;
@@ -77,6 +76,9 @@
 
 
     }
+    .slick-dots{
+      bottom: -40px;
+    }
     .card-bottom h1 {
       margin : 20px 20px;
       font-family: 'Inter';
@@ -101,12 +103,19 @@
       margin: 10px 20px;
     }
   
+    .stack-btn{
+      text-align: center;
+      margin-top: 70px;
+    }
  
   
   @media screen and (max-width: 991px) {
     .container {
-      padding-right: 30px;
       padding-left: 30px;
+      padding-right: 30px;
+
+  
+
     }
   }
   
@@ -125,6 +134,12 @@
     .stackdev-img{
         width: 100%;
 
+    }
+    .card-top > img {
+      height : 13rem;
+    }
+    .stack-btn{
+      text-align: center;
     }
     
     

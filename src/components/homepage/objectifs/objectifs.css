@@ -1,7 +1,7 @@
 .objectifs-section {
     background-color: #004AAD;
     color: #fff;
-    padding: 160px 0;
+    padding: 100px 0;
   }
   .objectifs-row {
     margin-top: -60px;
@@ -33,19 +33,18 @@
     margin-right: auto;
   }
   .objectifs-heading {
-    left: 50%;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     color: #f7f8fa;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 38px;
     line-height: 58px;
     text-align: center;
-    width: 540px;
+    width: 100%;
   }
   .objectifs-subtitle {
-    width: 550px;
+    /* width: 550px; */
     margin-bottom: 35px;
     font-family: 'Inter';
     font-style: normal;
@@ -53,8 +52,11 @@
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-
+    margin-right: auto;
+    margin-left: auto;
     letter-spacing: 0.02em;
+    margin-top: 6px;
+
 
   }
   
@@ -71,6 +73,10 @@
     margin-left: auto;
     padding-right: 0;
     margin-bottom:30px ;
+    border: 10px solid #004AAD;
+    border-width: thin;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
   }
   .objectifs-btn{
     text-align: center;
@@ -85,9 +91,7 @@
   }
   
   @media screen and (max-width: 768px) {
-    .objectifs-text-wrapper {
-      padding-bottom: 65px;
-    }
+   
   
     .objectifs-col {
       max-width: 100%;
@@ -100,16 +104,6 @@
         text-align: center;
         padding: 20px;
       }
-      .objectifs-heading {
-        margin-bottom: 24px;
-        color: #f7f8fa;
-        font-family: 'Inter';
-        font-style: Semi Bold;
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
-        text-align: center;
-        width: 100%;
-      }
+      
     
   }

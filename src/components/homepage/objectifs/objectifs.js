@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../button/Button";
 import objimg from '../../../images/objectifs.jpg';
 import './objectifs.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -28,7 +29,7 @@ function Objectifs() {
                   <p
                     className=
                       'objectifs-subtitle' >
-                    Cette formation à temps plein et à distance, d’une durée de dix semaines, a pour objectif de vous former au métier de Développeur Full Stack
+                    Cette formation à temps plein et à distance, <br/>d’une durée de dix semaines, a pour objectif<br/> de vous former au métier de Développeur Full Stack
                   </p>
                  
                 </div>
@@ -37,11 +38,11 @@ function Objectifs() {
                 </div>
                
                 <div className='objectifs-btn'>
-                    {/* <Link to='/sign-up'>*/}
+                    <Link to='/contactform'>
                     <Button buttonSize='btn--wide' buttonColor='primary' >
                       Je postule au Bootcamp
                     </Button>
-                  {/*</Link>*/}
+                  </Link>
                   </div>
                
                 

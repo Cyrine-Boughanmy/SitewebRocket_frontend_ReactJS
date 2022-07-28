@@ -1,7 +1,7 @@
 .prqrocketcoding-section {
     background-color: #004AAD;
     color: #fff;
-    padding: 160px 0;
+    padding: 100px 0;
   }
   .prqrocketcoding-row {
     margin-top: -60px;
@@ -45,7 +45,6 @@
     width: 100%;
   }
   .prqrocketcoding-subtitle {
-    max-width: 480px;
     margin-bottom: 35px;
     font-family: 'Inter';
     font-style: normal;
@@ -69,16 +68,17 @@
   }
   
   .prqrocketcoding-img {
-    max-width: 110%;
+    max-width: 100%;
     margin-top: 0;
     margin-right: auto;
     margin-left: auto;
     padding-right: 0;
     margin-bottom:30px ;
-    border: 10px solid #97BFFC;
+    border: 10px solid #004AAD;
+    border-width: thin;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 20px;
-    height: 405px;
+    border-radius: 10px;
+    /* height: 405px; */
     padding:0px;
     }
   
@@ -86,8 +86,9 @@
   
   @media screen and (max-width: 991px) {
     .container {
-      padding-right: 30px;
       padding-left: 30px;
+      padding-right: 30px;
+
     }
   }
   

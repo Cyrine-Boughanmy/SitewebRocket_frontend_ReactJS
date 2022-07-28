@@ -1,16 +1,49 @@
-import { AppBar, Toolbar , Box, Menu ,MenuItem , Typography,Button, IconButton} from '@mui/material';
+import { AppBar, Toolbar , Box, Menu ,MenuItem , Typography, IconButton, Container, Avatar, Hidden, SwipeableDrawer, Divider, List, ListItem} from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
-import React from 'react';
+import React, { useState } from 'react';
 import logoimg from '../../images/logo1.png';
 import MenuIcon from '@mui/icons-material/Menu';
 import { lineHeight } from '@mui/system';
-import { Link } from 'react-router-dom';
+import { Link } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { NoEncryption } from '@mui/icons-material';
+import { Button } from '../button/Button';
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
+
+const navigationLinks = [
+  { name: "Programme", href: "/programme" },
+  { name: "Tarif", href: "/tarif" },
+  { name: "Contact", href: "/contactform" },
+];
+const useStyles = makeStyles((theme) => ({
+  link: {
+    marginRight: 20,
+    fontFamily: 'Inter',
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "16px",
+    lineHeight: "24px"
+  },
+  avatar : {
+    marginRight: "auto",
+    color: "white",
+    backgroundColor: "black",
+    borderRadius: 0,
+    height: 30,
+    border: "2px solid gray",
+    borderLeft: "12px solid transparent",
+    borderRight: "12px solid transparent",
+    
+  },
+}));
 
 const Navbar = () => {
-  const pages = ['Programme', 'Tarif', 'Contact'];
+  const styles = useStyles();
+  const [open, setOpen] = useState(false);
  
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -20,137 +53,127 @@ const Navbar = () => {
   
 
   return (
-    <>
-    <AppBar  style={{backgroundColor:'#004AAD' , boxShadow:'0px '}}>
+    
+    <AppBar  position="sticky" style={{backgroundColor:"#004AAD"  , boxShadow:'0px '}}>
       <Toolbar>
+      
       <Typography
-            variant="h6"
-            noWrap
+            
+           
             component="a"
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'flex', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+               marginRight:"auto"
             }}
           >
             <img style={{width :"90px" , height:"60px",margin:"9px" }} src={logoimg} alt=''  />
-          </Typography>
-        
-        
-        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-              
-            >
-              <MenuIcon sx={{display : {xs:"flex"}}}/>
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-                
-               
-              }}
-            >
-              
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" sx={{fontFamily:'Inter', fontStyle:'normal'}}>{page}</Typography>
-                </MenuItem>
-              ))}
-              <Button
-            variant="contained"
-            onClick={handleCloseNavMenu}
-            
-            sx={{backgroundColor:"#E5D011 ", width:"100" , height:"auto",  borderRadius:"10px", 
-            boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)"}}
-            >
-                Je postule
-                </Button>
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              
-            }}
-          >
-            <img style={{width :"90px" , height:"60px",margin:"9px" , display: { xs: 'flex'}}} src={logoimg} alt=''  />
-          </Typography>
-          
-          
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' , justifyContent:'right' } }}>
-          <Typography
-        
-        sx={{ marginRight:'100px',marginTop: '25px',fontFamily:'Inter', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center"}}
-       >
-         Rocket Coding Bootcamp
-       </Typography>
-            
-              <Button
-                href="/programme"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', textTransform:'none' , fontSize:"16px",padding:"6px 40px"}}
-              >
-                Programme
-              </Button>
-              <Button
-                href="/tarif"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', textTransform:'none' ,fontSize:"16px" ,padding:"6px 40px"}}
-              >
-                Tarif
-              </Button>
-              <Button
-                href="/contact"
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' ,textTransform:'none' , fontSize:"16px",padding:"6px 40px"}}
-              >
-                Contact
-              </Button>
-            
-            <Button
-            variant="contained"
-            onClick={handleCloseNavMenu}
-            href="/jepostuleform"
-            sx={{backgroundColor:"#E5D011 ", width:"130px" , height:"40px", top:"13px", left:"10px",marginRight:"20px", borderRadius:"10px", 
-            boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)", textTransform:'none', fontSize:"16px", color:'#004AAD'}}
-            >
-                Je postule
-                </Button>
-          </Box>
 
+          </Typography>
+          <Typography sx={{display: { xs: 'none', md: 'flex' }}}>
+          <Typography
+          component="a"
+          href="/"
+          
+          sx={{ marginRight:'20px',fontFamily:'Inter', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center" ,marginTop:"6px" , textDecoration:"none"}}>
+                Rocket Coding Bootcamp
+          </Typography>
+          <Typography >
+            {navigationLinks.map((item) => (
+              <Link
+                sx={{marginRight:"20px"}}
+                className={styles.link}
+                color="#fff"
+                underline="none"
+                href={item.href}
+                key={item.name}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link
+                sx={{marginRight:"20px"}}
+                className={styles.link}
+                color="#fff"
+                underline="none"
+                href="/contactform"
+              
+              >
+                <Button buttonSize='btn--medium' buttonColor='primary'
+            
+            >
+                Je postule
+                </Button>
+              </Link>
+          </Typography>
+          </Typography>
+          <Typography 
+          sx={{display: { xs: 'flex', md: 'none' },}}
+          >
+            <IconButton>
+              <MenuIcon style={{color:"#ffff"}} onClick={() => setOpen(true) }/>
+            </IconButton>
+          </Typography>
+          <SwipeableDrawer
+        anchor="right"
+        open={open}
+        onOpen={() => setOpen(true)}
+        onClose={() => setOpen(false)}
+      >
+        <div
+          onClick={() => setOpen(false)}
+          onKeyPress={() => setOpen(false)}
+          role="button"
+          tabIndex={0}
+        >
+          <IconButton>
+            <ChevronRightIcon />
+          </IconButton>
+        </div>
+        <Divider />
+        <List>
+          {navigationLinks.map((item) => (
+            <ListItem key={item.name}>
+              <Link
+                className={styles.link}
+                color="textPrimary"
+                variant="button"
+                underline="none"
+                href={item.href}
+              >
+                {item.name}
+              </Link>
+            </ListItem>
+          ))}
+          <ListItem>
+          <Link
+                sx={{marginRight:"20px"}}
+                className={styles.link}
+                color="#fff"
+                underline="none"
+                href="/contactform"
+              
+              >
+                <Button buttonSize='btn--medium' buttonColor='primary'
+            
+            >
+                Je postule
+                </Button>
+              </Link>
+          </ListItem>
+
+        </List>
+      </SwipeableDrawer>
+        
       </Toolbar>
     </AppBar>
-    </>
+    
   );
 }
 

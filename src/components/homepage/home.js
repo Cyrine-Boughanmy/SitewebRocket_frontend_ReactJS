@@ -10,6 +10,8 @@ import Tarif from '../tarif/Tarif';
 import Prochainesréunions from './prochainesréunions/prochainesréunions';
 import Prochainessessions from './prochainessesions/prochainessessions';
 import Contact from '../contact/contact';
+import Formulaire from '../contactForm/contactform';
+import Footer from '../footer/Footer';
 
 
 
@@ -18,7 +20,7 @@ const Home = () => {
   return (
 <div>
   <Header/>
-  <Formezvous/> 
+  <Formezvous/>
   <Objectifs/>
   <Pourquoiunbootcamp/>
   <Pourquoirocketcoding/>
@@ -27,6 +29,11 @@ const Home = () => {
   <Tarif/>
   <Prochainesréunions/>
   <Prochainessessions/>
+  <Formulaire/>
+  <Footer/>
+  
+  
+  
   
 </div>
   )

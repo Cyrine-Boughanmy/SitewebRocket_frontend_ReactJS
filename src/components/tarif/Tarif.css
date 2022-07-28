@@ -1,7 +1,7 @@
 .tarif-section {
     background-color: #fff ;
     color: #004AAD;
-    padding: 160px 0;
+    padding: 100px 0;
   }
   .tarif-row {
     align-items: center;
@@ -13,7 +13,9 @@
   
   .tarif-col {
     margin-left: auto;
+    margin-right: auto;
     margin-bottom: 15px;
+    padding-right: 15px;
     padding-left: 15px;
     flex: 1;
     max-width: 70%;
@@ -38,7 +40,6 @@
     width: 100%;
   }
   .tarif-subtitle {
-    max-width: 550px;
     margin-bottom: 35px;
     font-family: 'Inter';
     font-style: normal;

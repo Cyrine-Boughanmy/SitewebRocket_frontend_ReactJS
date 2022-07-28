@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './section.css';
 import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
+import Popupinscription from '../popupinscription/popupinscription';
+import Form from '../contactForm/form';
+import $ from "jquery";
 
 
 function Section({
@@ -11,10 +14,24 @@ function Section({
   headline,
   description,
   buttonLabel,
+  buttonLink,
   img,
   alt,
   imgStart
 }) {
+
+  const [OpenPopup, SetOpenPopup] = useState(false);
+
+  const handleClickOpen = () => {
+    if(buttonLabel==="S’inscrire à la prochaine réunion d’information" ){
+      SetOpenPopup(true);
+    }
+    
+    
+  };
+
+  
+
   return (
     <>
       <div
@@ -44,18 +61,21 @@ function Section({
                 >
                   {description}
                 </p>
-               {/* <Link to='/sign-up'>*/}
-                  <Button buttonSize='btn--wide' buttonColor='lightblue'>
-                    {buttonLabel}
+               <Link to={buttonLink}>
+               <Button buttonSize='btn--wide' buttonColor='lightblue' onClick={handleClickOpen} >
+                    {buttonLabel} 
                   </Button>
-                {/*</Link>*/}
+                  { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>}
+              
+               </Link>
+                  
               </div>
             </div>
             <div className='col'>
               <div className='home__hero-img-wrapper'>
                 <img src={img} alt={alt} className='home__hero-img'
                 style={{
-                  marginLeft : imgStart==='start' ? '-210px' : '216px'
+                  marginLeft : imgStart==='start' ? '-40px' : '100px'
                  }}
                 />
               </div>
