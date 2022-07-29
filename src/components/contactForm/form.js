@@ -1,7 +1,8 @@
 import { ErrorMessage } from '@hookform/error-message';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import './Contact.css'
+import './Contact.css';
+import { motion } from 'framer-motion';
 
 const Form = () => {
 
@@ -38,7 +39,8 @@ const Form = () => {
 
   return (
     
-					<form
+					<motion.form
+					whileHover={{scale : 1.05}}
 						className="Formulaire"
 						onSubmit={handleSubmit((data) => {
 							//	envoi(data);
@@ -122,7 +124,7 @@ const Form = () => {
 
 							{/* <p>{result}</p>  */}
 						</div>
-					</form>
+					</motion.form>
 				
   );
 }

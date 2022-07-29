@@ -1,9 +1,7 @@
-import { React, useState } from 'react';
-import { ErrorMessage } from '@hookform/error-message';
-import { useForm } from 'react-hook-form';
+import { React } from 'react';
+
 import './Contact.css';
-import contactlogoimg from '../../images/logo1.png';
-import { Button } from '../button/Button';
+
 import Form from './form';
 {/*import { Grid } from '@material-ui/core';
 import Card from '@mui/material/Card';
@@ -26,7 +24,7 @@ const Formulaire = () => {
 
 
 	return (
-		<div className='contact-section'>
+		<div className='contact-section' id="contactform">
 			<div className='contact-container' id='contact'>
 				{/* Contact Form */}
 				<div className='contact-left'>

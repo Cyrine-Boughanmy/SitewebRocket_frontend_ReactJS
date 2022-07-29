@@ -1,21 +1,23 @@
 import { AppBar, Toolbar , Box, Menu ,MenuItem , Typography, IconButton, Container, Avatar, Hidden, SwipeableDrawer, Divider, List, ListItem} from '@mui/material';
-import AdbIcon from '@mui/icons-material/Adb';
+
 import React, { useState } from 'react';
 import logoimg from '../../images/logo1.png';
 import MenuIcon from '@mui/icons-material/Menu';
-import { lineHeight } from '@mui/system';
+
 import { Link } from '@mui/material';
+import { HashLink as HLink } from 'react-router-hash-link';
 import { makeStyles } from '@mui/styles';
-import { NoEncryption } from '@mui/icons-material';
+
 import { Button } from '../button/Button';
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { motion } from 'framer-motion';
 
 
 const navigationLinks = [
   
-  { name: "Programme", href: "/programme" },
-  { name: "Tarif", href: "/tarif" },
-  { name: "Contact", href: "/contactform" },
+  { name: "Programme", href: "#programme" },
+  { name: "Tarif", href: "#tarif" },
+  { name: "Contact", href: "#contactform" },
 ];
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -43,14 +45,7 @@ const Navbar = () => {
   const styles = useStyles();
   const [open, setOpen] = useState(false);
  
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  
   
 
   return (
@@ -74,7 +69,9 @@ const Navbar = () => {
                marginRight:"auto"
             }}
           >
-            <img style={{width :"90px" , height:"60px",margin:"9px" }} src={logoimg} alt=''  />
+            <motion.img 
+            whileHover={{scale : 1.15}}
+            style={{width :"90px" , height:"60px",margin:"9px" }} src={logoimg} alt=''  />
 
           </Typography>
           <Typography sx={{display: { xs: 'none', md: 'flex' }}}>
@@ -103,7 +100,7 @@ const Navbar = () => {
                 className={styles.link}
                 color="#fff"
                 underline="none"
-                href="/contactform"
+                href="#contactform"
               
               >
                 <Button buttonSize='btn--medium' buttonColor='primary'

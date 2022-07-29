@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.css';
+import { motion } from 'framer-motion';
 
 const STYLES = ['btn--primary'];
 
@@ -24,12 +25,13 @@ export const Button = ({
   const checkButtonColor = COLOR.includes(buttonColor) ? buttonColor : null;
 
   return (
-    <button
+    <motion.button
+    whileHover={{scale : 1.15}}
       className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
       onClick={onClick}
       type={type}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };

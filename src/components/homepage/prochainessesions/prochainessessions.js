@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import { Button } from '../../button/Button';
 import './prochainessessions.css';
 import { listesessions } from './listesessions';
+import { motion } from 'framer-motion';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -77,7 +78,9 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                 <div className='stack-slider'>
                 <Slider {...settings}>
                     {listesessions.map((item) => (
-                        <div className='session-card'>
+                        <motion.div 
+                        whileHover={{scale : 1.15}}
+                        className='session-card'>
                         <div className='session-card-top'>
                           <img src={item.img} alt={item.alt}/>
                           
@@ -97,7 +100,7 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                                 </Button>
                             </div>
                         </div>   
-                        </div>
+                        </motion.div>
                     ))}
                     </Slider>
                 </div>

@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { stack } from './stack';
 import { Button } from '../../button/Button';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -77,7 +78,9 @@ const Stackdedeveloppement = () => {
                   <div className='stack-slider'>
                     <Slider {...settings}>
                     {stack.map((item) => (
-                        <div className='card'>
+                        <motion.div 
+                        whileHover={{scale : 1.15}}
+                        className='card'>
                         <div className='card-top'>
                           <img src={item.img} alt={item.alt}/>
                           
@@ -85,7 +88,7 @@ const Stackdedeveloppement = () => {
                         <div className='card-bottom'>
                             <h1>{item.titre}</h1>
                         </div>   
-                        </div>
+                        </motion.div>
                     ))}
                     </Slider>
                     

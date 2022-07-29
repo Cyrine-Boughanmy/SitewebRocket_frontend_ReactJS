@@ -12,6 +12,7 @@ import Prochainessessions from './prochainessesions/prochainessessions';
 import Contact from '../contact/contact';
 import Formulaire from '../contactForm/contactform';
 import Footer from '../footer/Footer';
+import CookieConsent from 'react-cookie-consent';
 
 
 

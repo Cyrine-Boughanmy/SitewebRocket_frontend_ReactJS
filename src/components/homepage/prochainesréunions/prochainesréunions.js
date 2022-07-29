@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { reunions } from './reunions';
 import { Link } from 'react-router-dom';
 import { Button } from '../../button/Button';
+import { motion } from 'framer-motion';
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -70,10 +71,12 @@ const Prochainesréunions = () => {
                           Cette formation à temps plein, intensive d’une durée de dix semaines, vous offre la possibilté de vous former depuis chez vous au métier de Développeur Full Stack.     </p>
                    
                   </div>
-                  <div className='reunions-slider'>
+                  <div className='stack-slider'>
                     <Slider {...settings}>
                     {reunions.map((item) => (
-                        <div className='card'>
+                        <motion.div 
+                        whileHover={{scale : 1.15}}
+                        className='card'>
                         <div className='reuniondev-card-top'>
                           <div className='reuniondev-card-text-wrapper'>
                           <h2>{item.date}</h2>
@@ -82,7 +85,7 @@ const Prochainesréunions = () => {
                         <div className='reuniondev-card-bottom'>
                             <h2>{item.jour} {item.heure}</h2>
                         </div>   
-                        </div>
+                        </motion.div>
                     ))}
                     </Slider>
                     

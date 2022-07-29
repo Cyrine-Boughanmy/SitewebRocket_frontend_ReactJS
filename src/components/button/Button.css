@@ -52,7 +52,7 @@
   .btn--large:hover,
   .btn--medium:hover,
   .btn--mobile:hover {
-    transition: all 0.3s ease-out;
+    /* transition: all 0.3s ease-out; */
     background-color: #fff;
     color: #004AAD;
   }
@@ -60,7 +60,7 @@
   .btn--wide:hover {
     color: #000000;
     background-color: #ffff;
-    transition: all 0.2s ease-out;
+    /* transition: all 0.2s ease-out; */
   }
   
   .btn-link {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './section.css';
 import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Popupinscription from '../popupinscription/popupinscription';
 import Form from '../contactForm/form';
 import $ from "jquery";
@@ -73,7 +74,10 @@ function Section({
             </div>
             <div className='col'>
               <div className='home__hero-img-wrapper'>
-                <img src={img} alt={alt} className='home__hero-img'
+                {/* motion : pour animer l'image */}
+                <motion.img 
+                whileHover={{scale : 1.15}}
+                src={img} alt={alt} className='home__hero-img'
                 style={{
                   marginLeft : imgStart==='start' ? '-40px' : '100px' , border : lightBg ?  '10px solid #004AAD' : '10px solid #fff' ,borderWidth: 'medium'
                  }}

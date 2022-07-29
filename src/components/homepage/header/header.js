@@ -7,6 +7,7 @@ import Section from '../../section/section';
 import { header } from '../pages';
 import { Button } from '../../button/Button';
 import Popupinscription from '../../popupinscription/popupinscription';
+import CookieConsent from 'react-cookie-consent';
 
 
 
@@ -18,12 +19,17 @@ const Header = () => {
   return (
     <>
     <Section {...header}/>
+    <div>
+			<CookieConsent
+               enableDeclineButton
+               buttonText="J'accepte"
+               declineButtonText="Je refuse"
+      >
+        Ce site utilise des cookies pour améliorer votre expérience.
+      </CookieConsent>
+            </div>
     
-    {/*<Button buttonSize='btn--wide' buttonColor='lightblue' className='btn-header' onClick={() => SetOpenPopup(true)}
-                 >
-                S’inscrire à la prochaine réunion d’information
-    </Button>
-  <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}> </Popupinscription>*/}
+    
     
 </>);
   }

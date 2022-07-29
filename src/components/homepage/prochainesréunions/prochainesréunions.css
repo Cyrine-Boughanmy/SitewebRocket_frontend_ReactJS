@@ -130,7 +130,9 @@
       text-align: center;
     }
 
-
+    .slick-slide{
+      width: 271px;
+    }
     .slick-slide > div{
       margin : 5px 20px;
     }

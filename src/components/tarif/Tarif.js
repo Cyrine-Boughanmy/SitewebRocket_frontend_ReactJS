@@ -4,6 +4,7 @@ import { Button } from '../button/Button';
 import './Tarif.css';
 import { listetarif } from './listetarif';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 const breakPoints = [
@@ -57,7 +58,7 @@ const Tarif = () => {
     return (
         <>
           <div
-            className='tarif-section' >
+            className='tarif-section' id="tarif">
             <div className='container'>
               <div
                 className='row tarif-row'
@@ -81,7 +82,9 @@ const Tarif = () => {
 
                  <div className='tarif-img-wrapper'>
                  {listetarif.map((item) => (
-                  <img src={item.img} alt='tarif' className='tarif-img'/>
+                  <motion.img 
+                  whileHover={{scale : 1.15}}
+                  src={item.img} alt='tarif' className='tarif-img'/>
                   ))}
                   </div>
                   <div className='objectifs-btn'>
