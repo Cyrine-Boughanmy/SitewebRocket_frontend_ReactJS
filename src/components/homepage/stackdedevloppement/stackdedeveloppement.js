@@ -6,6 +6,8 @@ import { stack } from './stack';
 import { Button } from '../../button/Button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -22,6 +24,10 @@ const Stackdedeveloppement = () => {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
         initialSlide: 0,
         responsive: [
           {
@@ -76,6 +82,7 @@ const Stackdedeveloppement = () => {
                    
                   </div>
                   <div className='stack-slider'>
+                    <Slide right>
                     <Slider {...settings}>
                     {stack.map((item) => (
                         <motion.div 
@@ -91,7 +98,7 @@ const Stackdedeveloppement = () => {
                         </motion.div>
                     ))}
                     </Slider>
-                    
+                    </Slide>
                     
                     
                   </div>

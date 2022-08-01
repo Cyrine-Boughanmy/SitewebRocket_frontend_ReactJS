@@ -6,6 +6,8 @@ import { reunions } from './reunions';
 import { Link } from 'react-router-dom';
 import { Button } from '../../button/Button';
 import { motion } from 'framer-motion';
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2 },
@@ -15,12 +17,16 @@ const breakPoints = [
 const Prochainesréunions = () => {
      
     const settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      focusOnSelect: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true,
+      initialSlide: 0,
         responsive: [
           {
             breakpoint: 1024,
@@ -55,23 +61,24 @@ const Prochainesréunions = () => {
             className='reunionsdev-section' >
             <div className='container'>
               <div
-                className='row reunionsdev-row'
+                className='row stackdev-row'
                 style={{
                   display: 'flex',
                  
                 }}
               >
-                <div className='reunionsdev-col'>
-                  <div className='reunionsdev-text-wrapper'>
-                    <h1 className= 'reunionsdev-heading' >
+                <div className='stackdev-col'>
+                  <div className='stackdev-text-wrapper'>
+                    <h1 className= 'stackdev-heading' >
                     Prochaines réunions d’information                    </h1>
                     <p
                       className=
-                        'reunionsdev-subtitle' >
+                        'stackdev-subtitle' >
                           Cette formation à temps plein, intensive d’une durée de dix semaines, vous offre la possibilté de vous former depuis chez vous au métier de Développeur Full Stack.     </p>
                    
                   </div>
                   <div className='stack-slider'>
+                    <Slide left>
                     <Slider {...settings}>
                     {reunions.map((item) => (
                         <motion.div 
@@ -88,6 +95,7 @@ const Prochainesréunions = () => {
                         </motion.div>
                     ))}
                     </Slider>
+                    </Slide>
                     
                     
                     

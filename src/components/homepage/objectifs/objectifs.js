@@ -3,6 +3,7 @@ import { Button } from "../../button/Button";
 import objimg from '../../../images/objectifs.jpg';
 import './objectifs.css';
 import { Link } from "react-router-dom";
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 
 
 
@@ -21,11 +22,14 @@ function Objectifs() {
                
               }}
             >
+              <Fade top>
               <div className='objectifs-col'>
                 <div className='objectifs-text-wrapper'>
+                
                   <h1 className= 'objectifs-heading' >
                   Les OBJECTIFS du Bootcamp
                   </h1>
+                
                   <p
                     className=
                       'objectifs-subtitle' >
@@ -48,7 +52,7 @@ function Objectifs() {
                 
               </div>
             
-                
+              </Fade>
               
             </div>
           </div>

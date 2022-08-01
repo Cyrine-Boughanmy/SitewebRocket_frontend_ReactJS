@@ -4,9 +4,7 @@ import { Button } from '../button/Button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Popupinscription from '../popupinscription/popupinscription';
-import Form from '../contactForm/form';
-import $ from "jquery";
-
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 
 function Section({
   lightBg,
@@ -50,9 +48,12 @@ function Section({
               <div className='home__hero-text-wrapper'
               
               >
+                <Flip top>
                 <h1 className={lightText ? 'heading' : 'heading dark'}>
                   {headline}
                 </h1>
+                </Flip>
+                <Slide bottom>
                 <p
                   className={
                     lightTextDesc
@@ -62,6 +63,7 @@ function Section({
                 >
                   {description}
                 </p>
+                
                <Link to={buttonLink}>
                <Button buttonSize='btn--wide' buttonColor='lightblue' onClick={handleClickOpen} >
                     {buttonLabel} 
@@ -69,12 +71,13 @@ function Section({
                   { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>}
               
                </Link>
-                  
+                 </Slide> 
               </div>
             </div>
             <div className='col'>
               <div className='home__hero-img-wrapper'>
                 {/* motion : pour animer l'image */}
+                <Fade top >
                 <motion.img 
                 whileHover={{scale : 1.15}}
                 src={img} alt={alt} className='home__hero-img'
@@ -82,6 +85,7 @@ function Section({
                   marginLeft : imgStart==='start' ? '-40px' : '100px' , border : lightBg ?  '10px solid #004AAD' : '10px solid #fff' ,borderWidth: 'medium'
                  }}
                 />
+                </Fade>
               </div>
             </div>
           </div>

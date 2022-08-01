@@ -4,6 +4,7 @@ import { React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Form from '../contactForm/form';
 import './popupinscription.css';
+import { motion } from 'framer-motion';
 
 const Popupinscription = (props) => {
 
@@ -23,8 +24,8 @@ const Popupinscription = (props) => {
   return (
     <div>
       
-      <Dialog  
-	  maxWidth="sm"
+      <Dialog 
+      
 	  fullWidth
       open={OpenPopup}
       onClose={handleClose}

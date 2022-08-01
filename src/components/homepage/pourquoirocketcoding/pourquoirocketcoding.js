@@ -1,6 +1,7 @@
 import React from "react";
 import prqrcimg from '../../../images/prqrocketcoding.jpg';
 import './pourquoirocketcoding.css';
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 
 
 
@@ -9,6 +10,7 @@ import './pourquoirocketcoding.css';
 function Pourquoirocketcoding() {
     return (
       <>
+      
         <div
           className='prqrocketcoding-section' >
           <div className='container'>
@@ -19,6 +21,7 @@ function Pourquoirocketcoding() {
                
               }}
             >
+              <Fade top>
               <div className='prqrocketcoding-col'>
                 <div className='prqrocketcoding-text-wrapper'>
                   <h1 className= 'prqrocketcoding-heading' >
@@ -39,10 +42,11 @@ function Pourquoirocketcoding() {
               </div>
             
                 
-              
+              </Fade>
             </div>
           </div>
         </div>
+       
       </>
     );
   }

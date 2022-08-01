@@ -6,8 +6,7 @@ import{Route, Routes} from 'react-router-dom';
 import Programme from './components/programme/Programme';
 import Tarif from './components/tarif/Tarif';
 import Formulaire from './components/contactForm/contactform';
-import Objectifs from './components/homepage/objectifs/objectifs';
-import CookieBanner from './components/cookiebanner/cookiebanner';
+import CookieConsent from 'react-cookie-consent';
 function App() {
   return (
     <>
@@ -22,6 +21,13 @@ function App() {
 
               
   </Routes>
+  <CookieConsent
+               enableDeclineButton
+               buttonText="J'accepte"
+               declineButtonText="Je refuse"
+      >
+        Ce site utilise des cookies pour améliorer votre expérience.
+      </CookieConsent>
       
   
   

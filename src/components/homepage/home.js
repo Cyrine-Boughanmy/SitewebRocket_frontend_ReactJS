@@ -20,6 +20,15 @@ import CookieConsent from 'react-cookie-consent';
 const Home = () => {
   return (
 <div>
+<div>
+			<CookieConsent
+               enableDeclineButton
+               buttonText="J'accepte"
+               declineButtonText="Je refuse"
+      >
+        Ce site utilise des cookies pour améliorer votre expérience.
+      </CookieConsent>
+            </div>
   <Header/>
   <Formezvous/>
   <Objectifs/>

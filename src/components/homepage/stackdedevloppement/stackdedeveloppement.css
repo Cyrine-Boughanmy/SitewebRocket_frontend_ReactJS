@@ -78,6 +78,14 @@
 
 
     }
+    .slick-dots li button:before {
+      color: #fff; 
+      font-size: 20px;
+      width: 20px;
+    }
+    .slick-dots li.slick-active button:before{
+      color: #E5D011;
+    }
     .slick-dots ::before{
       bottom: -40px;
       color : #fff;

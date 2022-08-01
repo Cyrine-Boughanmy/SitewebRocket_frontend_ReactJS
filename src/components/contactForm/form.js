@@ -3,12 +3,27 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './Contact.css';
 import { motion } from 'framer-motion';
+import Modal from '../modal/Modal';
 
 const Form = () => {
 
 	const [form, setForm] = useState("");
 	const [mail, setMail] = useState("");
 	const { register, formState: { errors }, handleSubmit } = useForm();
+	const [isOpen, setIsOpen] = useState(false)
+	const[nom,SetNom]= useState('')
+    const [prenom, setprenom] = useState('')
+    const [email, setemail] = useState('')
+	const [tel, settel] = useState('')
+	const validate=()=>{
+		let user={nom:'',prenom:'',email:'',tel:''}
+		user.nom=nom
+		user.prenom=prenom
+		user.email=email
+		user.tel=tel
+		console.log(user);
+		
+		}
 
 	{/* const envoi = async (data) => {
 		console.log('==============ENVOIE=======');
@@ -38,7 +53,7 @@ const Form = () => {
 
 
   return (
-    
+    <>
 					<motion.form
 					whileHover={{scale : 1.05}}
 						className="Formulaire"
@@ -120,11 +135,18 @@ const Form = () => {
 
 
 
-							<button type="submit" >Je m'inscris</button>
+							<button  type="submit" className='envoyer-btn' onClick={() =>{ validate()
+										setIsOpen(true)}}>Je m'inscris</button>
 
 							{/* <p>{result}</p>  */}
 						</div>
 					</motion.form>
+					{ isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+					Veuillez remplir tous les champs.
+					</Modal> :<Modal open={isOpen} onClose={() => setIsOpen(false)}>
+					Vos coordonnées sont enregistrées et un message vous sera envoyé dans quelques minutes ! 
+					</Modal> } 
+					</>
 				
   );
 }

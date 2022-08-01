@@ -1,9 +1,12 @@
-import React from 'react';
+import React , { useState }from 'react';
 import Slider from 'react-slick';
 import { Button } from '../../button/Button';
 import './prochainessessions.css';
 import { listesessions } from './listesessions';
 import { motion } from 'framer-motion';
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+import Popupinscription from '../../popupinscription/popupinscription';
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -12,7 +15,7 @@ const breakPoints = [
     { width: 1200, itemsToShow: 4 },
   ];
 
-
+ 
 
 const Prochainessessions = () => {
 
@@ -51,7 +54,14 @@ const Prochainessessions = () => {
         ]
       };
 
-
+      const [OpenPopup, SetOpenPopup] = useState(false);
+      const handleClickOpen = () => {
+        
+          SetOpenPopup(true);
+        
+        
+        
+      };
 
     return (
         <>
@@ -76,6 +86,7 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                   </div>
                 <div className='session-col'>
                 <div className='stack-slider'>
+                  <Slide right>
                 <Slider {...settings}>
                     {listesessions.map((item) => (
                         <motion.div 
@@ -95,14 +106,16 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                            
                            <div className='session-btn'>
                                 {/* <Link to='/sign-up'>*/}
-                                <Button buttonSize='btn--medium' buttonColor='white' >
-                                Télécharger le programme
+                                <Button buttonSize='btn--medium' buttonColor='blue' onClick={handleClickOpen} >
+                                Je m'inscris
                                 </Button>
+                                { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>}
                             </div>
                         </div>   
                         </motion.div>
                     ))}
                     </Slider>
+                    </Slide>
                 </div>
                     
                 </div>

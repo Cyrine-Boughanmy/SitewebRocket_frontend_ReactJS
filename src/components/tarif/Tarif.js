@@ -5,6 +5,8 @@ import './Tarif.css';
 import { listetarif } from './listetarif';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+
 
 
 const breakPoints = [
@@ -22,6 +24,7 @@ const Tarif = () => {
         dots: true,
         infinite: false,
         speed: 500,
+        centerMode: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
@@ -79,14 +82,17 @@ const Tarif = () => {
                    
                   </div>
                 <div className='tarif-col'>
-
+                <Bounce right>
                  <div className='tarif-img-wrapper'>
+                  
                  {listetarif.map((item) => (
                   <motion.img 
                   whileHover={{scale : 1.15}}
                   src={item.img} alt='tarif' className='tarif-img'/>
                   ))}
+                  
                   </div>
+                  </Bounce>
                   <div className='objectifs-btn'>
                     <Link to='/contactform'>
                     <Button buttonSize='btn--medium' buttonColor='primary' >

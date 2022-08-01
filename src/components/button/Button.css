@@ -72,7 +72,11 @@
     height: 100%;
     width: 100%;
   }
-  
+  .blue{
+    background-color: #004AAD;
+    color: #fff;
+    border: none;
+  }
   .lightblue {
     background-color: #97BFFC;
     color: #000000;
