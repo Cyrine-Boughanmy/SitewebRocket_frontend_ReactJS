@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     
-    <AppBar  position="sticky" style={{backgroundColor:"#004AAD"  , boxShadow:'0px '}}>
+    <AppBar  position="sticky" style={{backgroundColor:"#014AAD"  , boxShadow:'0px '}}>
       <Toolbar>
       
       <Typography

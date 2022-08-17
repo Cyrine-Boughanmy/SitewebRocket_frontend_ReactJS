@@ -15,7 +15,7 @@
   
   .btn--white {
     background-color: var(--white);
-    color: #004AAD;
+    color: #014AAD;
     border: 1px solid var(--white);
   }
   
@@ -38,9 +38,9 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #004AAD;
+    color: #014AAD;
     padding: 14px 20px;
-    border: 1px solid #004AAD;
+    border: 1px solid #014AAD;
     transition: all 0.3s ease-out;
   }
   
@@ -54,7 +54,7 @@
   .btn--mobile:hover {
     /* transition: all 0.3s ease-out; */
     background-color: #fff;
-    color: #004AAD;
+    color: #014AAD;
   }
   
   .btn--wide:hover {
@@ -73,7 +73,7 @@
     width: 100%;
   }
   .blue{
-    background-color: #004AAD;
+    background-color: #014AAD;
     color: #fff;
     border: none;
   }
@@ -85,13 +85,13 @@
   
   .primary {
     background-color: #E5D011;
-    color: #004AAD;
+    color: #014AAD;
     border: none;
   }
   
   .white {
     background-color: #fff;
-    color: #004AAD;
+    color: #014AAD;
     border: none;
   }
   

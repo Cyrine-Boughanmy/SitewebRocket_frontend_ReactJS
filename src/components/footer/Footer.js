@@ -19,7 +19,7 @@ const Footer = () => {
   if (!location.pathname.match(regex)) {
     return (
       <div >
-            <Grid container id="footer" style={{backgroundColor:"#004AAD"}}>
+            <Grid container id="footer" style={{backgroundColor:"#014AAD"}}>
               <Grid container className="footer-logo-border" justifyContent="center" xs={12} md={2}>
                 <a href="/">
                   <img src={logorocketcoding} alt="logo Footer" style={{ maxWidth: "60%" , marginTop:"18px", marginLeft:"18px"}}></img>

@@ -83,7 +83,7 @@ function Section({
                 whileHover={{scale : 1.15}}
                 src={img} alt={alt} className='home__hero-img'
                 style={{
-                  marginLeft : imgStart==='start' ? '-40px' : '100px' , border : lightBg ?  '10px solid #004AAD' : '10px solid #fff' ,borderWidth: 'medium'
+                  marginLeft : imgStart==='start' ? '-40px' : '100px' , border : lightBg ?  '10px solid #014AAD' : '10px solid #fff' ,borderWidth: 'medium'
                  }}
                 />
                 </Fade>

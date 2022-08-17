@@ -30,7 +30,7 @@ const Popupinscription = (props) => {
       open={OpenPopup}
       onClose={handleClose}
       aria-labelledby="responsive-dialog-title">
-        <DialogContent style={{backgroundColor:'#004AAD'}} >
+        <DialogContent style={{backgroundColor:'#014AAD'}} >
         <Form/>
         </DialogContent>
         
