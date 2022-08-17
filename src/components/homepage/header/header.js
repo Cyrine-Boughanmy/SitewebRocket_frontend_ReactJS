@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './header.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';

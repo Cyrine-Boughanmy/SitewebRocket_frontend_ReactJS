@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './section.css';
 import { Button } from '../button/Button';
-// 
-import { Link } from '@mui/material';
+import {Link } from 'react-router-dom';
+// import { Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import Popupinscription from '../popupinscription/popupinscription';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
@@ -65,7 +65,7 @@ function Section({
                   {description}
                 </p>
                 
-               <Link href={buttonLink}>
+               <Link to={buttonLink}>
                <Button buttonSize='btn--wide' buttonColor='lightblue' onClick={handleClickOpen} >
                     {buttonLabel} 
                   </Button>

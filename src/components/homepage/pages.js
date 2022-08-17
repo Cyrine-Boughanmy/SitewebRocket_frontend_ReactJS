@@ -25,7 +25,7 @@ export const header = {
     description:
       ' Cette formation à temps plein, intensive d’une durée de dix semaines, vous offre la  possibilté de vous former depuis chez vous au métier de Développeur Full Stack',
     buttonLabel: 'Postuler',
-    buttonLink:'#contactform',
+    buttonLink:'/contactform',
     imgStart: 'start',
     img: fvimg,
     alt: 'formez-vous'
@@ -39,7 +39,7 @@ export const header = {
     description:
       "Chez Rocket Coding, la pratique tient une place cruciale dans notre programme de formation. Pendant ces dix semaines de formation intensive, nos rocketers réalisent plusieurs projets issus de cas réels, afin de les préparer au mieix à ce qui les attend dans le monde professionnel . Lapprentissage est encré sur la reproduction de sites Web et d applications Mobile réels, afin de présenter tous les concepts importants en programmation.",
     buttonLabel: 'Consulter le programme',
-    buttonLink:'#programme',
+    buttonLink:'/programme',
     imgStart: 'start',
     img: prqfaire,
     alt: 'pourquoi faire le Bootcamp'
@@ -52,7 +52,7 @@ export const header = {
     description:
       "Notre objecitf numéro un est d’aider nos Rocketers à monter en compétences dans le domaine de la programmation informatique le plus rapidement possible. Nos experts en programmation proposereont des cas pratiques concernant les notions apprises, pour s’assurer de leur bonne compréhension. ",
     buttonLabel: 'Télécharger le programme',
-    buttonLink:'#programme',
+    buttonLink:'/programme',
     imgStart: '',
     img: pageprog,
     alt: 'programme de la formation'

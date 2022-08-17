@@ -3,8 +3,8 @@ import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, T
 import { React, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Form from '../contactForm/form';
-import './popupinscription.css';
 import { motion } from 'framer-motion';
+import InscriptionForm from './inscriptionform';
 
 const Popupinscription = (props) => {
 
@@ -31,7 +31,7 @@ const Popupinscription = (props) => {
       onClose={handleClose}
       aria-labelledby="responsive-dialog-title">
         <DialogContent style={{backgroundColor:'#014AAD'}} >
-        <Form/>
+        <InscriptionForm/>
         </DialogContent>
         
       </Dialog>

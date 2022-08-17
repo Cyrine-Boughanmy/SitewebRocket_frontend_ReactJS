@@ -101,6 +101,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    
   }
   .session-card-bottom{
     margin: 10px 20px;
