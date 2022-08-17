@@ -1,5 +1,5 @@
 :root {
-    --white: #fff;
+    --white: #FFFFFF;
   }
   
   .btn {
@@ -8,7 +8,7 @@
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-weight: 600;
   }
@@ -53,13 +53,13 @@
   .btn--medium:hover,
   .btn--mobile:hover {
     /* transition: all 0.3s ease-out; */
-    background-color: #fff;
+    background-color: #FFFFFF;
     color: #014AAD;
   }
   
   .btn--wide:hover {
     color: #000000;
-    background-color: #ffff;
+    background-color: #FFFFFF;
     /* transition: all 0.2s ease-out; */
   }
   
@@ -90,13 +90,13 @@
   }
   
   .white {
-    background-color: #fff;
+    background-color: #FFFFFF;
     color: #014AAD;
     border: none;
   }
   
   .primary:hover {
-    background-color: #fff;
+    background-color: #FFFFFF;
     border: none;
   }
  

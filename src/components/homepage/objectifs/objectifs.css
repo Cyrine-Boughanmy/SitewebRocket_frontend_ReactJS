@@ -1,6 +1,6 @@
 .objectifs-section {
     background-color: #014AAD;
-    color: #fff;
+    color: #FFFFFF;
     padding: 100px 0;
   }
   .objectifs-row {
@@ -34,8 +34,8 @@
   }
   .objectifs-heading {
     margin-bottom: 30px;
-    color: #f7f8fa;
-    font-family: 'Inter';
+    color: #FFFFFF;
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 38px;
@@ -46,7 +46,7 @@
   .objectifs-subtitle {
     /* width: 550px; */
     margin-bottom: 35px;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;

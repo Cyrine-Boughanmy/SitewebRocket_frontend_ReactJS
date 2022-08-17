@@ -18,7 +18,7 @@
     
 }
 .text-titler {
-font-family: 'Inter';
+font-family:'Arimo', sans-serif;
 font-style: normal;
 font-weight: 900;
 font-size: 48px;
@@ -29,7 +29,7 @@ margin-top: 40px;
 margin-left : 100px;
 }
 .text-descriptionr{
-font-family: 'Inter';
+font-family:'Arimo', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 24px;
@@ -44,7 +44,7 @@ border-radius: 10px;
 border: none;
 width: 508px;
 height: 57px;
-font-family: 'Inter';
+font-family:'Arimo', sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 20px;

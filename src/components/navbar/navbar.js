@@ -22,7 +22,7 @@ const navigationLinks = [
 const useStyles = makeStyles((theme) => ({
   link: {
     marginRight: 20,
-    fontFamily: 'Inter',
+    fontFamily: 'Arimo',
     fontStyle: "normal",
     fontWeight: 400,
     fontSize: "16px",
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar : {
     marginRight: "auto",
-    color: "white",
+    color: "#FFFFFF",
     backgroundColor: "black",
     borderRadius: 0,
     height: 30,
@@ -61,7 +61,7 @@ const Navbar = () => {
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'Arimo',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -79,7 +79,7 @@ const Navbar = () => {
           component="a"
           href="/"
           
-          sx={{ marginRight:'20px',fontFamily:'Inter', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
+          sx={{ marginRight:'20px',fontFamily:'Arimo', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
                 Rocket Coding 
           </Typography>
           <Typography >
@@ -87,7 +87,7 @@ const Navbar = () => {
               <Link
                 sx={{marginRight:"20px"}}
                 className={styles.link}
-                color="#fff"
+                color="#FFFFFF"
                 underline="none"
                 href={item.href}
                 key={item.name}
@@ -98,7 +98,7 @@ const Navbar = () => {
             <Link
                 sx={{marginRight:"20px"}}
                 className={styles.link}
-                color="#fff"
+                color="#FFFFFF"
                 underline="none"
                 href="#contactform"
               
@@ -115,7 +115,7 @@ const Navbar = () => {
           sx={{display: { xs: 'flex', md: 'none' },}}
           >
             <IconButton>
-              <MenuIcon style={{color:"#ffff"}} onClick={() => setOpen(true) }/>
+              <MenuIcon style={{color:"#FFFFFF"}} onClick={() => setOpen(true) }/>
             </IconButton>
           </Typography>
           <SwipeableDrawer
@@ -165,7 +165,7 @@ const Navbar = () => {
           <Link
                 sx={{marginRight:"20px"}}
                 className={styles.link}
-                color="#fff"
+                color="#FFFFFF"
                 underline="none"
                 href="/contactform"
               

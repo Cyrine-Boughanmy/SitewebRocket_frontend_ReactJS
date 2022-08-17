@@ -31,7 +31,7 @@
   .tarif-heading {
     margin-bottom: 30px;
     color: #014AAD;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 38px;
@@ -41,7 +41,7 @@
   }
   .tarif-subtitle {
     margin-bottom: 35px;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
@@ -98,7 +98,7 @@
  
    .tarif-title h2{
     color: #f7f8fa;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-size: 20px;
     line-height: 5px;
@@ -106,13 +106,13 @@
 
 .tarif-desc p{
     color: #f7f8fa;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-size: 15px;
 }
 .tarif h6{
     color: #f7f8fa;
-    font-family: 'Inter';
+    font-family:'Arimo', sans-serif;
     font-style: normal;
     font-size: 15px;
 
