@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import './Contact.css';
 import { motion } from 'framer-motion';
 import Modal from '../modal/Modal';
+import axios from 'axios';
+import { data } from 'jquery';
 
 const Form = () => {
 
@@ -24,15 +26,18 @@ const Form = () => {
 		console.log(user);
 		
 		}
+	// const [form, setForm] = useState("");
+    // const [mail,setMail] = useState("");
+    // const { register, formState: { errors }, handleSubmit } = useForm();
 
-	{/* const envoi = async (data) => {
+	 const envoi = async (data) => {
 		console.log('==============ENVOIE=======');
 		console.log(data);
 		console.log('==============FIN=======');
 
 		await axios
 			.post(
-				'https://afrikavenir93.herokuapp.com/contacts/',
+				"http://localhost:8000/formulaire_postuler/liste/",
 				{ ...data } // {...data, message: "...."}
 				
 			)
@@ -43,7 +48,7 @@ const Form = () => {
 			.catch((e) => {
 				console.log(e.response);
 			});
-	};*/}
+	};
 
 	const update = (e) => {
 		const id = e.target.id;
@@ -58,7 +63,9 @@ const Form = () => {
 					whileHover={{scale : 1.05}}
 						className="Formulaire"
 						onSubmit={handleSubmit((data) => {
-							//	envoi(data);
+							envoi(data);
+							// validate();
+							// setIsOpen(true);
 
 
 						})}
@@ -72,7 +79,7 @@ const Form = () => {
 
 								register('nom', {
 									required: '* Ce champs est requis',
-									//value : data.nom,
+									value : data.nom,
 									shouldUnregister: true,
 								})}
 								placeholder="Nom *"
@@ -108,7 +115,7 @@ const Form = () => {
 										message: 'Ce champs ne comprend que des chiffres.'
 									}
 								})}
-								placeholder="Telephone *"
+								placeholder="Téléphone *"
 							/>
 							<ErrorMessage
 								errors={errors}
@@ -119,11 +126,7 @@ const Form = () => {
 							{/* --- EMAIL INPUT --- */}
 							<input
 								{...register('email', {
-									required: '* Ce champs est requis',
-									pattern: {
-										value: /\d+/,
-										message: 'Ce champs ne comprend que des chiffres.'
-									}
+									required: '* Ce champs est requis'
 								})}
 								placeholder="Email *"
 							/>
@@ -135,17 +138,18 @@ const Form = () => {
 
 
 
-							<button  type="submit" className='envoyer-btn' onClick={() =>{ validate()
-										setIsOpen(true)}}>Je m'inscris</button>
+							<button  type="submit" className='envoyer-btn' >Je postule</button>
+							{/* onClick={() =>{ validate()
+										setIsOpen(true)}} */}
 
 							{/* <p>{result}</p>  */}
 						</div>
 					</motion.form>
-					{ isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+					{/* { isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Veuillez remplir tous les champs.
 					</Modal> :<Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Vos coordonnées sont enregistrées et un message vous sera envoyé dans quelques minutes ! 
-					</Modal> } 
+					</Modal> }  */}
 					</>
 				
   );
