@@ -1,8 +1,9 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
-import Logo_Fb from '../../images/Logo_Fb.png';
-import Logo_Insta from '../../images/Logo_Insta.png';
+import Logo_Fb from '../../images/facebook_jaune_24px.png';
+import Logo_Insta from '../../images/instagram_jaune_24px.png';
 import logorocketcoding from '../../images/logo1.png';
+import Logo_Linkedin from '../../images/linkedin_jaune_24px.png';
 import './Footer.css';
 import { useLocation } from "react-router-dom";
 
@@ -40,8 +41,8 @@ const Footer = () => {
                   </Grid>
                   <Grid xs={12} sm={6} md={3} className="openhours">
                     <h5>HORAIRES</h5>
-                    <span>Lundi au Samedi : </span><br/><span className="openhours"> 11h00 – 14h00, 18h00 – 23h00</span>
-                    <p>Dimanche : <br/> <span>15h00 – 23h00</span></p>
+                    <span>Lundi au Vendredi : </span><br/><span className="openhours"> 09h00 - 18h00</span>
+                    
                   </Grid>
                   <Grid xs={12} sm={6} md={3}>
                     <h5>CONTACT</h5>
@@ -64,6 +65,10 @@ const Footer = () => {
                        &nbsp; 
                       <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" >
                       <img src={Logo_Insta} alt='logo instagram'></img>
+                      </a>
+                      &nbsp; 
+                      <a target="_blank" rel="noreferrer" >
+                      <img src={Logo_Linkedin} alt='logo linkedin'></img>
                       </a>
                     </p>
                   </Grid>
