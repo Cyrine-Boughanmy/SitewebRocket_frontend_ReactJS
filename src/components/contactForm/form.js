@@ -6,12 +6,14 @@ import { motion } from 'framer-motion';
 import Modal from '../modal/Modal';
 import axios from 'axios';
 import { data } from 'jquery';
+import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 const Form = () => {
 
 	const [form, setForm] = useState("");
 	const [mail, setMail] = useState("");
 	const { register, formState: { errors }, handleSubmit } = useForm();
+	
 	const [isOpen, setIsOpen] = useState(false)
 	const[nom,SetNom]= useState('')
     const [prenom, setprenom] = useState('')
@@ -26,6 +28,15 @@ const Form = () => {
 		console.log(user);
 		
 		}
+// 		const [OpenPopup, SetOpenPopup] = useState(false);
+
+//   const handleClickOpen = () => {
+    
+//       SetOpenPopup(true);
+    
+    
+    
+//   };
 	// const [form, setForm] = useState("");
     // const [mail,setMail] = useState("");
     // const { register, formState: { errors }, handleSubmit } = useForm();
@@ -50,11 +61,12 @@ const Form = () => {
 			});
 	};
 
-	const update = (e) => {
-		const id = e.target.id;
-		const value = e.target.value;
-		setForm({ ...form, [id]: value });
-	};
+	// const update = (e) => {
+	// 	const id = e.target.id;
+	// 	const value = e.target.value;
+	// 	setForm({ ...form, [id]: value });
+	// };
+	
 
 
   return (
@@ -64,10 +76,6 @@ const Form = () => {
 						className="Formulaire"
 						onSubmit={handleSubmit((data) => {
 							envoi(data);
-							// validate();
-							// setIsOpen(true);
-
-
 						})}
 					>
 						<h5> Postuler </h5>
@@ -83,6 +91,9 @@ const Form = () => {
 									shouldUnregister: true,
 								})}
 								placeholder="Nom *"
+								onChange={(e)=>{
+									SetNom(e.target.value)
+								}}
 							/>
 
 							{/** Show an error message under the input if the field does not respect validation rules */}
@@ -98,6 +109,9 @@ const Form = () => {
 									required: '* Ce champs est requis'
 								})}
 								placeholder="Prénom *"
+								onChange={(e)=>{
+									setprenom(e.target.value)
+								}}
 							/>
 
 							<ErrorMessage
@@ -116,6 +130,9 @@ const Form = () => {
 									}
 								})}
 								placeholder="Téléphone *"
+								onChange={(e)=>{
+									settel(e.target.value)
+								}}
 							/>
 							<ErrorMessage
 								errors={errors}
@@ -129,27 +146,36 @@ const Form = () => {
 									required: '* Ce champs est requis'
 								})}
 								placeholder="Email *"
+								onChange={(e)=>{
+									setemail(e.target.value)
+								}}
 							/>
 							<ErrorMessage
 								errors={errors}
 								name="email"
 								render={({ message }) => <p id="Message_erreur">{message}</p>}
 							/>
+								
 
 
 
-							<button  type="submit" className='envoyer-btn' >Je postule</button>
+							<button  type="submit" className='envoyer-btn' onClick={() =>{ validate()
+										setIsOpen(true)}} >Je postule</button>
+							{/* {handleClickOpen && <popupvalidation OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></popupvalidation>} */}
 							{/* onClick={() =>{ validate()
 										setIsOpen(true)}} */}
 
 							{/* <p>{result}</p>  */}
 						</div>
 					</motion.form>
-					{/* { isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+
+					
+
+					{ isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Veuillez remplir tous les champs.
 					</Modal> :<Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Vos coordonnées sont enregistrées et un message vous sera envoyé dans quelques minutes ! 
-					</Modal> }  */}
+					</Modal> } 
 					</>
 				
   );

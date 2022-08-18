@@ -74,18 +74,18 @@ const Navbar = () => {
             style={{width :"90px" , height:"60px",margin:"9px" }} src={logoimg} alt=''  />
 
           </Typography>
-          <Typography sx={{display: { xs: 'none', md: 'flex' }}}>
+          <Typography sx={{display: { xs: 'none', md: 'flex' }, fontFamily: 'Arimo',}}>
           <Typography
           component="a"
           href="/"
           
-          sx={{ marginRight:'20px',fontFamily:'Arimo', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#E5D011', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
+          sx={{ marginRight:'20px',fontFamily:'Arimo', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#FF9F1C', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
                 Rocket Coding 
           </Typography>
           <Typography >
             {navigationLinks.map((item) => (
               <Link
-                sx={{marginRight:"20px"}}
+                sx={{marginRight:"20px", fontFamily: 'Arimo',}}
                 className={styles.link}
                 color="#FFFFFF"
                 underline="none"
@@ -96,7 +96,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-                sx={{marginRight:"20px"}}
+                sx={{marginRight:"20px",fontFamily: 'Arimo',}}
                 className={styles.link}
                 color="#FFFFFF"
                 underline="none"

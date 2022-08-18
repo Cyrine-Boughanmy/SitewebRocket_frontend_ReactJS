@@ -1,9 +1,9 @@
 import React from 'react'
 import { Grid } from '@material-ui/core';
-import Logo_Fb from '../../images/facebook_jaune_24px.png';
-import Logo_Insta from '../../images/instagram_jaune_24px.png';
+import Logo_Fb from '../../images/facebook_orange_26px.png';
+import Logo_Insta from '../../images/instagram_orange_30px.png';
 import logorocketcoding from '../../images/logo1.png';
-import Logo_Linkedin from '../../images/linkedin_jaune_24px.png';
+import Logo_Linkedin from '../../images/linkedin_orange_26px.png';
 import './Footer.css';
 import { useLocation } from "react-router-dom";
 
@@ -77,7 +77,7 @@ const Footer = () => {
 
               </Grid>
             </Grid>
-            <Grid container justifyContent="center" style={{backgroundColor:'#fff'}}>
+            <Grid container justifyContent="center" style={{backgroundColor:'#FFFFFF'}}>
                 
                     <span className="footer-copyright">Copyright 2021 ©  |  Made by <a 
                       className="footer-link" 

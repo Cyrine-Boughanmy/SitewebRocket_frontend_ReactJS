@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import '../contactForm/Contact.css';
 import { motion } from 'framer-motion';
 import Modal from '../modal/Modal';
+import { Box, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 const InscriptionForm = () => {
 
@@ -24,6 +25,7 @@ const InscriptionForm = () => {
 		console.log(user);
 		
 		}
+		
 
 	{/* const envoi = async (data) => {
 		console.log('==============ENVOIE=======');
@@ -119,19 +121,19 @@ const InscriptionForm = () => {
 							{/* --- EMAIL INPUT --- */}
 							<input
 								{...register('email', {
-									required: '* Ce champs est requis',
-									pattern: {
-										value: /\d+/,
-										message: 'Ce champs ne comprend que des chiffres.'
-									}
+									required: '* Ce champs est requis'
 								})}
 								placeholder="Email *"
+								onChange={(e)=>{
+									setemail(e.target.value)
+								}}
 							/>
 							<ErrorMessage
 								errors={errors}
 								name="email"
 								render={({ message }) => <p id="Message_erreur">{message}</p>}
 							/>
+							
 
 
 
@@ -141,11 +143,11 @@ const InscriptionForm = () => {
 							{/* <p>{result}</p>  */}
 						</div>
 					</motion.form>
-					{ isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+					{/* { isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Veuillez remplir tous les champs.
 					</Modal> :<Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Vos coordonnées sont enregistrées et un message vous sera envoyé dans quelques minutes ! 
-					</Modal> } 
+					</Modal> }  */}
 					</>
 				
   );

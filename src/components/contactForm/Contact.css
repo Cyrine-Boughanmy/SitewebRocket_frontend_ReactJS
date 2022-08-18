@@ -94,7 +94,7 @@
     background-color: #FFFFFF;
     box-shadow: 0px 3px 9px #00000029;
     border-radius: 25px;
-    border: 10px solid #97BFFC;
+    border: 10px solid #67AAF9;
     border-width: thick;
 }
 
@@ -147,7 +147,7 @@ select, input {
 
 button[type="submit"], .button {
     position: relative;
-    background: #E5D011;
+    background: #FF9F1C;
     color: #014AAD;
     border: none;
     margin-top: 20px;

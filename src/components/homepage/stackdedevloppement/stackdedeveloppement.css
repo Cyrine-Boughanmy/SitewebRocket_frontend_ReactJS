@@ -1,6 +1,6 @@
 .stackdev-section {
     background-color: #014AAD;
-    color: #fff;
+    color: #FFFFFF;
     padding: 100px 0;
   }
   .stackdev-row {
@@ -31,7 +31,7 @@
   }
   .stackdev-heading {
     margin-bottom: 30px;
-    color: #f7f8fa;
+    color: #FFFFFF;
     font-family:'Arimo', sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -61,7 +61,7 @@
   
     .card{
       border: 10px solid #fff;
-      background: #97BFFC;
+      background: #67AAF9;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
       height: 280px;
@@ -84,11 +84,11 @@
       width: 20px;
     }
     .slick-dots li.slick-active button:before{
-      color: #E5D011;
+      color: #FF9F1C;
     }
     .slick-dots ::before{
       bottom: -40px;
-      color : #fff;
+      color : #FFFFFF;
     }
     .card-bottom h1 {
       /* margin : 20px 20px; */
