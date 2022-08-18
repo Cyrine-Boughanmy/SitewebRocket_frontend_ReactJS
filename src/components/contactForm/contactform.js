@@ -1,4 +1,5 @@
 import { React } from 'react';
+import InscriptionForm from '../popupinscription/inscriptionform';
 
 import './Contact.css';
 
@@ -37,6 +38,7 @@ const Formulaire = () => {
 					<p> ..............</p>
 				</div>
 				<div className='contact-form'>
+				{/* <Form/> */}
 				<Form/>
 				</div>
 			</div>

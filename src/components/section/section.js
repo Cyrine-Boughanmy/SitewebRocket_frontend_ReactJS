@@ -6,6 +6,7 @@ import {Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Popupinscription from '../popupinscription/popupinscription';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+import InscriptionForm from '../popupinscription/inscriptionform';
 
 function Section({
   lightBg,

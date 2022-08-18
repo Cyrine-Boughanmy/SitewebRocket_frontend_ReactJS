@@ -159,8 +159,7 @@ const Form = () => {
 
 
 
-							<button  type="submit" className='envoyer-btn' onClick={() =>{ validate()
-										setIsOpen(true)}} >Je postule</button>
+							<button  type="submit" className='envoyer-btn'  >Je postule</button>
 							{/* {handleClickOpen && <popupvalidation OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></popupvalidation>} */}
 							{/* onClick={() =>{ validate()
 										setIsOpen(true)}} */}
@@ -171,11 +170,11 @@ const Form = () => {
 
 					
 
-					{ isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+					{/* { isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Veuillez remplir tous les champs.
 					</Modal> :<Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Vos coordonnées sont enregistrées et un message vous sera envoyé dans quelques minutes ! 
-					</Modal> } 
+					</Modal> }  */}
 					</>
 				
   );
