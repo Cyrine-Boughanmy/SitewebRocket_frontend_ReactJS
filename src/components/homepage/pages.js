@@ -11,7 +11,7 @@ export const header = {
     description:
       'La seule formation à distance, en accéléré et intensive d’une durée de 10 semaines pour devenir Développeur Full Stack',
     buttonLabel: 'S’inscrire à la prochaine réunion d’information',
-    buttonLink:'',
+    buttonLink:'/forminscriptionreunion',
     imgStart: '',
     img: accimg,
     alt: 'accueil'

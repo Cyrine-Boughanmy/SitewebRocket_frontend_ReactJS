@@ -6,7 +6,14 @@ import {Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Popupinscription from '../popupinscription/popupinscription';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
-import InscriptionForm from '../popupinscription/inscriptionform';
+import InscriptionForm from '../homepage/header/inscriptionform';
+import CustomizedDialogs from '../popupinscription/popupinscription';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
+// import Modal from '../modal/Modal';
+import Modal from 'react-responsive-modal';
+import { data } from 'jquery';
+import { ErrorMessage } from '@hookform/error-message';
 
 function Section({
   lightBg,
@@ -25,7 +32,10 @@ function Section({
 
   const handleClickOpen = () => {
     if(buttonLabel==="S’inscrire à la prochaine réunion d’information" ){
-      SetOpenPopup(true);
+      
+      // SetOpenPopup(true);
+      
+
     }
     
     
@@ -67,11 +77,13 @@ function Section({
                 </p>
                 
                <Link to={buttonLink}>
-               <Button buttonSize='btn--wide' buttonColor='lightblue' onClick={handleClickOpen} >
+               <Button buttonSize='btn--wide' buttonColor='lightblue'  >
                     {buttonLabel} 
                   </Button>
-                  { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>}
-              
+                   {/*  */}
+ 
+                  {/* { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription> } */}
+                  {/*  */}
                </Link>
                  </Slide> 
               </div>

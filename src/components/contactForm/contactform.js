@@ -1,5 +1,5 @@
 import { React } from 'react';
-import InscriptionForm from '../popupinscription/inscriptionform';
+import InscriptionForm from '../homepage/header/inscriptionform';
 
 import './Contact.css';
 

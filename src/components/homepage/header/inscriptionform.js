@@ -1,14 +1,14 @@
 import { ErrorMessage } from '@hookform/error-message';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import '../contactForm/Contact.css';
+import '../../contactForm/Contact.css';
 import { motion } from 'framer-motion';
-import Modal from '../modal/Modal';
-import { Box, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import Modal from '../../modal/Modal';
+import { Box, DialogActions, DialogContent, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { data } from 'jquery';
-
+import {reunions} from '../prochainesréunions/reunions';
 const InscriptionForm = (props) => {
 	
 
@@ -69,6 +69,7 @@ const InscriptionForm = (props) => {
   return (
     <>
 					<motion.form
+					id="myform"
 					whileHover={{scale : 1.05}}
 						className="Formulaire"
 						onSubmit={handleSubmit((data) => {
@@ -77,17 +78,19 @@ const InscriptionForm = (props) => {
 
 						})}
 					>
+						 
 						<h5> S'inscrire </h5>
 
 						<div className="Categorie_Formulaire">
 							{/** FIRST NAME INPUT */}
+							
 							<input
 								{.../* register must be use to apply validation rules on the input. Find more : https://react-hook-form.com/api/useform/register/ */
 
 								register('nom', {
 									required: '* Ce champs est requis',
 									value : data.nom,
-									shouldUnregister: true,
+									shouldUnregister: false,
 								})}
 								placeholder="Nom *"
 							/>
@@ -160,22 +163,11 @@ const InscriptionForm = (props) => {
 									value={date_reunion}
 									onChange={handleChange}
 								>
-                            {/* <InputLabel id="demo-simple-select-label"
-                            {...register('date_reunion', {
-                                required: '* Ce champs est requis'
-                            })}
-                            ></InputLabel>
-                            <Select
-							sx={{border: "1px solid #014AAD"}}
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={date_reunion}
-                            label="Date réunion"
-                            onChange={handleChange}
-                            > */}
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
+                            {reunions.map((item) => (
+                            <MenuItem value={item.date}>le {item.jour} {item.date} à {item.heure}</MenuItem>
+                            // <MenuItem value={20}>Twenty</MenuItem>
+                            // <MenuItem value={30}>Thirty</MenuItem>
+							))}
 							</TextField>
 							</ThemeProvider>
                             {/* </Select> */}
@@ -186,10 +178,8 @@ const InscriptionForm = (props) => {
                             />
                                 </FormControl>
                               
-
-
-							<button  type="submit" className='envoyer-btn' >Je m'inscris</button>
-
+							<button  type="submit" className='envoyer-btn' form="myform">Je m'inscris</button>
+		
 							{/* <p>{result}</p>  */}
 						</div>
 					</motion.form>

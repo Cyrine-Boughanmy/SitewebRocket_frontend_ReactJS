@@ -17,15 +17,4 @@ export const reunions =[
     jour : 'Lundi',
     heure : '18h'
 },
-{
-    id : 4,
-    date : '31/12/2022',
-    jour : 'Lundi',
-    heure : '18h'
-},
-{
-    id : 5,
-    date : '31/12/2022',
-    jour : 'Lundi',
-    heure : '18h'
-}]
+]
