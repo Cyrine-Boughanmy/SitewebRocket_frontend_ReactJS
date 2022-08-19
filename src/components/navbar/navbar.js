@@ -19,6 +19,12 @@ const navigationLinks = [
   { name: "Tarif", href: "#tarif" },
   { name: "Contact", href: "#contactform" },
 ];
+const navigationMobileLinks = [
+  
+  { name: "Programme", href: "/programme" },
+  { name: "Tarif", href: "/tarif" },
+  { name: "Contact", href: "/contactform" },
+];
 const useStyles = makeStyles((theme) => ({
   link: {
     marginRight: 20,
@@ -148,7 +154,7 @@ const Navbar = () => {
                 Rocket Coding
               </Link>
           </ListItem>
-          {navigationLinks.map((item) => (
+          {navigationMobileLinks.map((item) => (
             <ListItem key={item.name}>
               <Link
                 className={styles.link}
