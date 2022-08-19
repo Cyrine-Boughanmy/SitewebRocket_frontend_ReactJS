@@ -7,9 +7,9 @@ export const listesessions=[
     {
     id: 1,    
     img: session1,
-    alt: 'session',
-    titre:'session 1',
-    desc:'description de la session',
+    alt: 'session1',
+    titre:'01/2023',
+    desc:'Janvier à Mars 2023',
     
     
 
@@ -17,28 +17,20 @@ export const listesessions=[
 {
     id:2,
     img:session2,
-    alt: 'session',
-    titre:'session 2',
-    desc:'description de la session',
+    alt: 'session2',
+    titre:'04/2023',
+    desc:'Avril à juin 2023',
 
 
 },
 {
     id:3,
-    img:session1,
-    alt: 'session',
-    titre:'session 3',
-    desc:'description de la session',
-
-
-},
-{
-    id:4,
-    img:'',
-    alt: 'session',
-    titre:'titre',
-    desc:'description',
+    img:session2,
+    alt: 'session3',
+    titre:'07/2023',
+    desc:'Juillet à septembre 2023',
 
 
 }
+
 ]

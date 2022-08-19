@@ -4,6 +4,8 @@ import { Button } from '../../button/Button';
 import './prochainessessions.css';
 import { listesessions } from './listesessions';
 import { motion } from 'framer-motion';
+import {Link } from 'react-router-dom';
+
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 import Popupinscription from '../../popupinscription/popupinscription';
 
@@ -105,11 +107,12 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                            </div>
                            
                            <div className='session-btn'>
-                                {/* <Link to='/sign-up'>*/}
+                                <Link to='/forminscriptionreunion'>
                                 <Button buttonSize='btn--medium' buttonColor='blue' onClick={handleClickOpen} >
                                 Je m'inscris
                                 </Button>
-                                { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>}
+                                </Link>
+                                {/* { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>} */}
                             </div>
                         </div>   
                         </motion.div>

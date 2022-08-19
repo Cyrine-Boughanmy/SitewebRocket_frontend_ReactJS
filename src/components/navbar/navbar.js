@@ -22,7 +22,7 @@ const navigationLinks = [
 const useStyles = makeStyles((theme) => ({
   link: {
     marginRight: 20,
-    fontFamily: 'Arimo',
+    fontFamily:"'Arimo', sans-serif",
     fontStyle: "normal",
     fontWeight: 400,
     fontSize: "16px",
@@ -61,7 +61,7 @@ const Navbar = () => {
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'flex' },
-              fontFamily: 'Arimo',
+              fontFamily:"'Arimo', sans-serif",
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -74,18 +74,18 @@ const Navbar = () => {
             style={{width :"90px" , height:"60px",margin:"9px" }} src={logoimg} alt=''  />
 
           </Typography>
-          <Typography sx={{display: { xs: 'none', md: 'flex' }, fontFamily: 'Arimo',}}>
+          <Typography sx={{display: { xs: 'none', md: 'flex' }, fontFamily:"'Arimo', sans-serif",}}>
           <Typography
           component="a"
           href="/"
           
-          sx={{ marginRight:'20px',fontFamily:'Arimo', fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#FF9F1C', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
+          sx={{ marginRight:'20px',fontFamily:"'Arimo', sans-serif", fontStyle:'normal',fontWeight:"900",lineHeight:'24px',color:'#FF9F1C', fontSize:'20px', justifyContent:"center" ,marginTop:"7px" , textDecoration:"none"}}>
                 Rocket Coding 
           </Typography>
           <Typography >
             {navigationLinks.map((item) => (
               <Link
-                sx={{marginRight:"20px", fontFamily: 'Arimo',}}
+                sx={{marginRight:"20px", fontFamily:"'Arimo', sans-serif",}}
                 className={styles.link}
                 color="#FFFFFF"
                 underline="none"
@@ -96,7 +96,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-                sx={{marginRight:"20px",fontFamily: 'Arimo',}}
+                sx={{marginRight:"20px",fontFamily:"'Arimo', sans-serif",}}
                 className={styles.link}
                 color="#FFFFFF"
                 underline="none"

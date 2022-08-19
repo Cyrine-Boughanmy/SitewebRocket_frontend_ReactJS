@@ -79,7 +79,18 @@ const InscriptionForm = (props) => {
 						})}
 					>
 						 
-						<h5> S'inscrire </h5>
+						<h5 style={{fontFamily:"'Arimo', sans-serif",
+    fontStyle:" normal",
+    fontWeight: "900",
+    lineHeight: "58px",
+    textAlign: "center",
+    marginBottom: "25px",
+    marginTop: 0,
+	marginLeft:0,
+	textAlign: "center",
+    fontSize: "36px",
+	
+	}}> S'inscrire à la prochaine réunion d'information  </h5>
 
 						<div className="Categorie_Formulaire">
 							{/** FIRST NAME INPUT */}
