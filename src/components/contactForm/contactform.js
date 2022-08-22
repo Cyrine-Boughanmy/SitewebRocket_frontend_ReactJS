@@ -1,5 +1,6 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import InscriptionForm from '../homepage/header/inscriptionform';
+import Modal from '../modal/Modal';
 
 import './Contact.css';
 
@@ -22,7 +23,7 @@ import { data } from 'jquery';*/}
 /** Components */
 const Formulaire = () => {
 
-
+	
 
 	return (
 		<div className='contact-section' id="contactform">
@@ -40,6 +41,7 @@ const Formulaire = () => {
 				<div className='contact-form'>
 				{/* <Form/> */}
 				<Form/>
+				
 				</div>
 			</div>
 			

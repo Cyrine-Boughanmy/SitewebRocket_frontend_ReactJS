@@ -189,16 +189,17 @@ const InscriptionForm = (props) => {
                             />
                                 </FormControl>
                               
-							<button  type="submit" className='envoyer-btn' form="myform">Je m'inscris</button>
-		
-							{/* <p>{result}</p>  */}
-						</div>
-					</motion.form>
-					{/* { isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+							<button  type="submit" className='envoyer-btn' form="myform" onClick={() =>{ validate()
+										setIsOpen(true)}}>Je m'inscris</button>
+							{ isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Veuillez remplir tous les champs.
 					</Modal> :<Modal open={isOpen} onClose={() => setIsOpen(false)}>
 					Vos coordonnées sont enregistrées et un message vous sera envoyé dans quelques minutes ! 
-					</Modal> }  */}
+					</Modal> } 
+							{/* <p>{result}</p>  */}
+						</div>
+					</motion.form>
+					
 					</>
 				
   );
