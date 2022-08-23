@@ -2,35 +2,36 @@
 import './App.css';
 import Navbar from './components/navbar/navbar';
 import Home from './components/homepage/home';
-import{Route, Routes} from 'react-router-dom';
+// import{Route, Routes} from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Programme from './components/programme/Programme';
 import Tarif from './components/tarif/Tarif';
 import Formulaire from './components/contactForm/contactform';
 import CookieConsent from 'react-cookie-consent';
 import Forminscriptionreunion from './components/homepage/header/forminscriptionreunion';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 function App() {
+
+  
   return (
     <>
-      <Navbar/>
+      
       {/* <Forminscriptionreunion/> */}
      
+      <Router>
+        <Navbar/>
   <Routes>
-        <Route path="/" element={<Home/>}/>    
-        <Route path="/tarif" element={<Tarif/>} />
-        <Route path="/programme" element={<Programme/>}/> 
-        <Route path="/contactform" element={<Formulaire/>}/> 
-        <Route path="/forminscriptionreunion" element={<Forminscriptionreunion/>}/>
-
+ 
+        <Route exact path="/" element={<Home/>}>  </Route>
+        <Route exact path="/tarif" element={<Tarif/>} ></Route>
+        <Route exact path="/programme" element={<Programme/>}></Route> 
+        <Route exact path="/contactform" element={<Formulaire/>}> </Route>
+        <Route exact path="/forminscriptionreunion" element={<Forminscriptionreunion/>}></Route>
               
-  </Routes>
-  <CookieConsent
-               enableDeclineButton
-               buttonText="J'accepte"
-               declineButtonText="Je refuse"
-      >
-        Ce site utilise des cookies pour améliorer votre expérience.
-      </CookieConsent>
-      
+  </Routes></Router>
+  
   
   
     </>

@@ -3,7 +3,8 @@ import Slider from 'react-slick';
 import { Button } from '../button/Button';
 import './Tarif.css';
 import { listetarif } from './listetarif';
-import { Link } from 'react-router-dom';
+// import { Link } from '@mui/material';
+import { Link } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 
@@ -94,7 +95,7 @@ const Tarif = () => {
                   </div>
                   </Bounce>
                   <div className='objectifs-btn'>
-                    <Link to='/contactform'>
+                    <Link href='#contactform'>
                     <Button buttonSize='btn--medium' buttonColor='primary' >
                       Je postule au Bootcamp
                     </Button>

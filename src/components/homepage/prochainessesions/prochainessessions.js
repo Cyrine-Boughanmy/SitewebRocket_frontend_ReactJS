@@ -8,6 +8,7 @@ import {Link } from 'react-router-dom';
 
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 import Popupinscription from '../../popupinscription/popupinscription';
+import InscriptionForm from '../header/inscriptionform';
 
 
 const breakPoints = [
@@ -56,10 +57,10 @@ const Prochainessessions = () => {
         ]
       };
 
-      const [OpenPopup, SetOpenPopup] = useState(false);
+      const [isOpen, setIsOpen] = useState(false);
       const handleClickOpen = () => {
         
-          SetOpenPopup(true);
+        setIsOpen(true);
         
         
         
@@ -107,15 +108,17 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
                            </div>
                            
                            <div className='session-btn'>
-                                <Link to='/forminscriptionreunion'>
+                                {/* <Link to='/forminscriptionreunion'> */}
                                 <Button buttonSize='btn--medium' buttonColor='blue' onClick={handleClickOpen} >
                                 Je m'inscris
                                 </Button>
-                                </Link>
+                                {/* </Link> */}
+                               
                                 {/* { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription>} */}
                             </div>
                         </div>   
                         </motion.div>
+                        
                     ))}
                     </Slider>
                     </Slide>
@@ -128,6 +131,9 @@ Cette formation à temps plein, intensive d’une durée de dix semaines, vous o
               </div>
             </div>
           </div>
+          <Popupinscription open={isOpen} onClose={() => setIsOpen(false)}>
+                        <InscriptionForm/>
+                        </Popupinscription> 
         </>
       );
     }

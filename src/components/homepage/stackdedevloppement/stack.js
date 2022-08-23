@@ -13,63 +13,71 @@ export const stack =[
     id: 1,    
     img: cssimg,
     alt: 'css',
-    titre : 'CSS'
+    titre : 'CSS',
+    desc:'course description',
 
 },
 {
     id:2,
     img: htmlimg,
     alt: 'html',
-    titre : 'HTML'
-
+    titre : 'HTML',
+    desc:''
 },
 {
     id : 3,
     img: jsimg,
     alt: 'javascript',
-    titre : 'JavaScript'
+    titre : 'JavaScript',
+    desc:'',
 
 },
 {
     id : 4,
     img: reactimg,
     alt: 'react',
-    titre : 'React'
+    titre : 'React',
+    desc:'',
 
 },
 {
     id : 5,
     img: pythonimg,
     alt: 'python',
-    titre : 'Python'
+    titre : 'Python',
+    desc:'',
 
 },
 {
     id : 6,
     img: djangoimg,
     alt: 'django',
-    titre : 'Django'
+    titre : 'Django',
+    desc:'',
 
 },
 {
     id : 7,
     img: firebaseimg,
     alt: 'firebase',
-    titre : 'Firebase'
+    titre : 'Firebase',
+    desc:'',
 
 },
 {
     id : 8,
     img: herokuimg,
     alt: 'heroku',
-    titre : 'Heroku'
+    titre : 'Heroku',
+    desc:'',
 
 },
 {
     id : 9,
     img: stripeimg,
     alt: 'stripe',
-    titre : 'Stripe'
+    titre : 'Stripe',
+    desc:'',
 
 },
 

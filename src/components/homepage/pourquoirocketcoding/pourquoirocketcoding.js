@@ -1,5 +1,5 @@
 import React from "react";
-import prqrcimg from '../../../images/prqrocketcoding.jpg';
+import prqrcimg from '../../../images/pfrocket.jpg';
 import './pourquoirocketcoding.css';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 

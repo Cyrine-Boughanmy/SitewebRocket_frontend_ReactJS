@@ -1,10 +1,11 @@
 import { Carousel } from 'react-carousel-responsive';
-import React from 'react';
+import React, { useState,MouseEvent } from 'react';
 import './stackdedeveloppement.css';
 import Slider from "react-slick";
 import { stack } from './stack';
 import { Button } from '../../button/Button';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { Link, Popover, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 
@@ -58,6 +59,18 @@ const Stackdedeveloppement = () => {
       };
 
 
+      const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
     return (
         <>
           <div
@@ -85,7 +98,12 @@ const Stackdedeveloppement = () => {
                     <Slide right>
                     <Slider {...settings}>
                     {stack.map((item) => (
+                      <>
                         <motion.div 
+                        aria-owns={open ? 'mouse-over-popover' : undefined}
+                        aria-haspopup="true"
+                        onMouseEnter={handlePopoverOpen}
+                        onMouseLeave={handlePopoverClose}
                         whileHover={{scale : 1.15}}
                         className='card'>
                         <div className='card-top'>
@@ -96,6 +114,8 @@ const Stackdedeveloppement = () => {
                             <h1>{item.titre}</h1>
                         </div>   
                         </motion.div>
+                        
+                        </>
                     ))}
                     </Slider>
                     </Slide>
@@ -104,14 +124,33 @@ const Stackdedeveloppement = () => {
                   </div>
 
                 <div className='stack-btn'>
-                  <Link to='/programme'>
+                  <Link href='#programme'>
                     <Button buttonSize='btn--wide' buttonColor='lightblue' >
                       consulter le programme
                     </Button>
                   </Link>
                   </div>
-              
                   
+                  <Popover
+                    id="mouse-over-popover"
+                    sx={{
+                      pointerEvents: 'none',
+                    }}
+                    open={open}
+                    anchorEl={anchorEl}
+                    anchorOrigin={{
+                      vertical: 'bottom',
+                      horizontal: 'left',
+                    }}
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'left',
+                    }}
+                    onClose={handlePopoverClose}
+                    disableRestoreFocus
+                  >
+                    <Typography sx={{ p: 1 }}>description</Typography>
+                  </Popover>
                 </div>
               </div>
             </div>

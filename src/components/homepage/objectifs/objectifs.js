@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from "../../button/Button";
 import objimg from '../../../images/objectifs.jpg';
 import './objectifs.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from '@mui/material';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
 
 
@@ -42,7 +43,7 @@ function Objectifs() {
                 </div>
                
                 <div className='objectifs-btn'>
-                    <Link to='/contactform'>
+                    <Link href='#contactform'>
                     <Button buttonSize='btn--wide' buttonColor='primary' >
                       Je postule au Bootcamp
                     </Button>

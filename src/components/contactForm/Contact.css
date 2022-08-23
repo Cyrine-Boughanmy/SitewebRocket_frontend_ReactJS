@@ -2,9 +2,15 @@
 
 .contact-section{
     background-color: #014AAD;
-    padding: 100px 0;
+    padding: 50px 0;
     overflow-x: hidden;
 }
+.reunionsdev-contact-section{
+    background-color: #014AAD;
+    /* padding: 100px 0; */
+    overflow-x: hidden;
+}
+
 .contact-container {
     
     display: flex;
@@ -12,7 +18,11 @@
     color: #FFFFFF;
 
 }
-
+.reunionsdev-contact-container{
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+}
     
 
 .contact-form {
@@ -22,7 +32,13 @@
     margin-bottom: 10vh;
     margin-right: 10vh;
 }
-
+.reunionsdev-contact-form{
+    width: 45%;
+    height: 40%;
+    /* margin-top: 10vh; */
+    margin-bottom: 10vh;
+    margin-right: 10vh;
+}
 .contact-left {
 
     display: flex;

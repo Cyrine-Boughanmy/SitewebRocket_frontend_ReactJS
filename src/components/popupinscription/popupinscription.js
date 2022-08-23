@@ -1,39 +1,39 @@
-import { ErrorMessage } from '@hookform/error-message';
-import { Box, createTheme, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, MenuItem, Modal, TextField, ThemeProvider, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { React, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import Form from '../contactForm/form';
-import { motion } from 'framer-motion';
-import InscriptionForm from '../homepage/header/inscriptionform';
-import axios from 'axios';
-import { data } from 'jquery';
+// import { ErrorMessage } from '@hookform/error-message';
+// import { Box, createTheme, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, MenuItem, Modal, TextField, ThemeProvider, Typography, useMediaQuery, useTheme } from '@mui/material';
+// import { React, useState } from 'react';
+// import { useForm } from 'react-hook-form';
+// import Form from '../contactForm/form';
+// import { motion } from 'framer-motion';
+// import InscriptionForm from '../homepage/header/inscriptionform';
+// import axios from 'axios';
+// import { data } from 'jquery';
 
 
 
 
-const Popupinscription = (props) => {
-	const{OpenPopup,SetOpenPopup}=props;
-    const [open, setOpen] = useState(false);
-    const handleClickOpen = () => {
-      SetOpenPopup(true);
-    };
-    const handleClose = () => {
-      SetOpenPopup(false);
-    };
-	return (
-		 	  <div >
-<Modal
-        fullWidth
-      open={OpenPopup}
-      onClose={handleClose}
-      aria-labelledby="responsive-dialog-title">
-        <DialogContent style={{backgroundColor:'#014AAD'}} >
-      <InscriptionForm/>
-        </DialogContent>
-      </Modal>
-</div>
-	);
-   }
+// const Popupinscription = (props) => {
+// 	const{OpenPopup,SetOpenPopup}=props;
+//     const [open, setOpen] = useState(false);
+//     const handleClickOpen = () => {
+//       SetOpenPopup(true);
+//     };
+//     const handleClose = () => {
+//       SetOpenPopup(false);
+//     };
+// 	return (
+// 		 	  <div >
+// <Modal
+//         fullWidth
+//       open={OpenPopup}
+//       onClose={handleClose}
+//       aria-labelledby="responsive-dialog-title">
+//         <DialogContent style={{backgroundColor:'#014AAD'}} >
+//       <InscriptionForm/>
+//         </DialogContent>
+//       </Modal>
+// </div>
+// 	);
+//    }
 // 	const [open, setOpen] = useState(false);
   
 // 	const onOpenModal = () => {
@@ -188,4 +188,74 @@ const Popupinscription = (props) => {
 //   };
   
 
-export default Popupinscription;
+// export default Popupinscription;
+
+import { Dialog, DialogContent, useMediaQuery, useTheme } from '@mui/material'
+import React from 'react'
+import ReactDom from 'react-dom'
+
+const MODAL_STYLES = {
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  backgroundColor: 'transparent',
+  padding: '30px',
+  zIndex: 2000
+}
+
+const OVERLAY_STYLES = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0, 0, 0, .7)',
+  zIndex: 1000
+}
+const Button_Style ={
+  backgroundcolor: '#90D9F1',
+  border:'none',
+  fontsize: '25px',
+  
+}
+
+export default function Popupinscription({ open, children, onClose }) {
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  
+  if (!open) return null
+
+  return ReactDom.createPortal(
+    <>
+      <div style={OVERLAY_STYLES} />
+      <Dialog 
+      PaperProps={{
+        style: {
+          backgroundColor: "transparent",
+          boxShadow: "none"
+        },
+      }}
+      maxWidth
+      sx={{height:"auto", backgroundColor:'transparent'}}
+      
+      open={open}
+      onClose={onClose}
+
+      >
+        <DialogContent style={{backgroundColor:'transparent'}} >
+        <button style={{backgroundColor:'transparent',border:'none',fontsize:'25px',position:'absolute',top:'12px',right:'16px',color:"#FFFFFF"}} onClick={onClose}>Fermer</button>
+        <br></br>
+        {children}</DialogContent>
+      </Dialog>
+      {/* <div style={OVERLAY_STYLES} />
+      <div style={MODAL_STYLES}>
+        <button style={{backgroundColor:'transparent',border:'none',fontsize:'25px',position:'absolute',top:'16px',right:'16px'}} onClick={onClose}>Fermer</button>
+        <br></br>
+        {children}
+      </div> */}
+    </>,
+   
+    document.getElementById('portal')
+  )
+}

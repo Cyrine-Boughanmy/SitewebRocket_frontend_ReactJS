@@ -4,23 +4,15 @@ import Form from '../../contactForm/form';
 import InscriptionForm from './inscriptionform';
 
 const Forminscriptionreunion = () => {
+  
   return (
     
-    <div className='contact-section' id="contactform">
-      {/* <h1 style={{fontFamily:"'Arimo', sans-serif",
-    fontStyle:" normal",
-    fontWeight: "300",
-    lineHeight: "32px",
-    textAlign: "center",
-    marginRight: "auto",
-    marginLeft: "auto",
-    color:" #FFFFFF"}} >
-                  S'inscrire à la prochaine réunion d'information :
-                  </h1> */}
-			<div className='contact-container' id='contact'>
+    <div className='reunionsdev-contact-section' id="contactform">
+      
+			<div className='reunionsdev-contact-container' id='contact'>
         
                  
-            <div className='contact-form' style={{textAlign:'center', marginLeft:"auto",marginRight:"auto"}}>
+            <div className='reunionsdev-contact-form' style={{textAlign:'center', marginLeft:"auto",marginRight:"auto"}}>
            
             
                 <InscriptionForm/>

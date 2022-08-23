@@ -1,12 +1,17 @@
 import { Carousel } from 'react-carousel-responsive';
-import React from 'react';
+import React, { useState } from 'react';
 import './prochainesréunions.css';
 import Slider from "react-slick";
 import { reunions } from './reunions';
-import { Link } from 'react-router-dom';
+// import { Link } from '@mui/material';
+import { Link } from '@mui/material';
 import { Button } from '../../button/Button';
 import { motion } from 'framer-motion';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+import Forminscriptionreunion from '../header/forminscriptionreunion';
+import Modal from '../../modal/Modal';
+import Popupinscription from '../../popupinscription/popupinscription';
+import InscriptionForm from '../header/inscriptionform';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -16,6 +21,9 @@ const breakPoints = [
   ];
 const Prochainesréunions = () => {
      
+  const [active, setActive]= useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
     const settings = {
       dots: true,
       infinite: false,
@@ -101,11 +109,15 @@ const Prochainesréunions = () => {
                     
                   </div>
                   <div className='stack-btn'>
-                    <Link to='/programme'>
-                    <Button buttonSize='btn--wide' buttonColor='lightblue' >
-                      consulter le programme
+                    {/* <Link href='#forminscriptionreunion'> */}
+                    <Button buttonSize='btn--wide' buttonColor='lightblue' onClick={() => {
+                          setActive(true);
+                          setIsOpen(true);
+                        }} >
+                    S’inscrire à la prochaine réunion d’information
                     </Button>
-                  </Link>
+                    
+                  {/* </Link> */}
                   </div>
                 
               
@@ -114,6 +126,11 @@ const Prochainesréunions = () => {
               </div>
             </div>
           </div>
+          <Popupinscription open={isOpen} onClose={() => setIsOpen(false)}>
+          <InscriptionForm/>
+					</Popupinscription>
+          {/* {active && <Forminscriptionreunion/>} */}
+          
         </>
       );
     }

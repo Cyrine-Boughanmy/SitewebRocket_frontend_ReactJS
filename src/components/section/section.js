@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './section.css';
 import { Button } from '../button/Button';
-import {Link } from 'react-router-dom';
-// import { Link } from '@mui/material';
+// import {Link } from 'react-router-dom';
+import { Link } from '@mui/material';
+import { useNavigate} from 'react-router-dom';
+
 import { motion } from 'framer-motion';
 import Popupinscription from '../popupinscription/popupinscription';
 import { Fade , Slide , Flip , Bounce} from 'react-reveal';
@@ -14,6 +16,8 @@ import { useForm } from 'react-hook-form';
 import Modal from 'react-responsive-modal';
 import { data } from 'jquery';
 import { ErrorMessage } from '@hookform/error-message';
+import Forminscriptionreunion from '../homepage/header/forminscriptionreunion';
+import { SettingsPowerRounded } from '@material-ui/icons';
 
 function Section({
   lightBg,
@@ -23,23 +27,21 @@ function Section({
   description,
   buttonLabel,
   buttonLink,
+  buttonHref,
   img,
   alt,
   imgStart
 }) {
 
-  const [OpenPopup, SetOpenPopup] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive]= useState(false);
+  
   const handleClickOpen = () => {
-    if(buttonLabel==="S’inscrire à la prochaine réunion d’information" ){
-      
-      // SetOpenPopup(true);
-      
-
-    }
-    
-    
-  };
+    // if (buttonLabel==='S’inscrire à la prochaine réunion d’information') {
+      // setActive(true);
+      setIsOpen(true);
+    // }
+  }
 
   
 
@@ -74,17 +76,30 @@ function Section({
                   }
                 >
                   {description}
-                </p>
-                
-               <Link to={buttonLink}>
-               <Button buttonSize='btn--wide' buttonColor='lightblue'  >
-                    {buttonLabel} 
+                </p> 
+                {/* button field */}
+                { buttonLabel==='S’inscrire à la prochaine réunion d’information' ? <>
+                  <Button buttonSize='btn--wide' buttonColor='lightblue'  onClick={handleClickOpen}
+                  > 
+                  
+                      {buttonLabel} 
+                     </Button>
+                   <Popupinscription open={isOpen} onClose={() => setIsOpen(false)}>
+                      <InscriptionForm/>
+                      </Popupinscription> </> :
+              
+               <Link href={buttonLink}>
+               <Button buttonSize='btn--wide' buttonColor='lightblue'  onClick={handleClickOpen}
+               > 
+               
+                   <a style={{ textDecoration: "none" , color:"#000000"}} href={buttonHref}>{buttonLabel} </a> 
                   </Button>
+                
                    {/*  */}
- 
-                  {/* { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription> } */}
+                            
+                       {/* { handleClickOpen && <Popupinscription OpenPopup={OpenPopup} SetOpenPopup={SetOpenPopup}></Popupinscription> } */}
                   {/*  */}
-               </Link>
+               </Link> }
                  </Slide> 
               </div>
             </div>
