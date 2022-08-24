@@ -4,62 +4,62 @@ import objimg from '../../../images/objectifs.jpg';
 import './objectifs.css';
 // import { Link } from "react-router-dom";
 import { Link } from '@mui/material';
-import { Fade , Slide , Flip , Bounce} from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 
 
 
 
 function Objectifs() {
-    return (
-      <>
-        <div
-          className='objectifs-section' >
-          <div className='container'>
-            <div
-              className='row objectifs-row'
-              style={{
-                display: 'flex',
-               
-              }}
-            >
-              <Fade top>
+  return (
+    <>
+      <div
+        className='objectifs-section' >
+        <div className='container'>
+          <div
+            className='row objectifs-row'
+            style={{
+              display: 'flex',
+
+            }}
+          >
+            <Fade top>
               <div className='objectifs-col'>
                 <div className='objectifs-text-wrapper'>
-                
-                  <h1 className= 'objectifs-heading' >
-                  Les OBJECTIFS du Bootcamp
+
+                  <h1 className='objectifs-heading' >
+                    Les OBJECTIFS du Bootcamp
                   </h1>
-                
+
                   <p
                     className=
-                      'objectifs-subtitle' >
-                    Cette formation à temps plein et à distance, <br/>d’une durée de dix semaines, a pour objectif<br/> de vous former au métier de Développeur Full Stack
+                    'objectifs-subtitle' >
+                    Cette formation à temps plein et à distance, <br />d’une durée de dix semaines, a pour objectif<br /> de vous former au métier de Développeur Full Stack
                   </p>
-                 
+
                 </div>
                 <div className='objectifs-img-wrapper'>
                   <img src={objimg} alt='objectifs' className='objectifs-img' />
                 </div>
-               
+
                 <div className='objectifs-btn'>
-                    <Link href='#contactform'>
+                  <Link href='#contactform'>
                     <Button buttonSize='btn--wide' buttonColor='primary' >
                       Je postule au Bootcamp
                     </Button>
                   </Link>
-                  </div>
-               
-                
+                </div>
+
+
               </div>
-            
-              </Fade>
-              
-            </div>
+
+            </Fade>
+
           </div>
         </div>
-      </>
-    );
-  }
-  
-  export default Objectifs;
+      </div>
+    </>
+  );
+}
+
+export default Objectifs;

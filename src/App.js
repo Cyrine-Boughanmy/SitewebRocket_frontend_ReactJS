@@ -7,10 +7,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Programme from './components/programme/Programme';
 import Tarif from './components/tarif/Tarif';
 import Formulaire from './components/contactForm/contactform';
-import CookieConsent from 'react-cookie-consent';
 import Forminscriptionreunion from './components/homepage/header/forminscriptionreunion';
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
 
 function App() {
 

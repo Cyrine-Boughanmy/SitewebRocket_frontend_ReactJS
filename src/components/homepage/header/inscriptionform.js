@@ -4,11 +4,14 @@ import { useForm } from 'react-hook-form';
 import '../../contactForm/Contact.css';
 import { motion } from 'framer-motion';
 import Modal from '../../modal/Modal';
-import { Box, DialogActions, DialogContent, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { FormControl, MenuItem, TextField } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { data } from 'jquery';
 import { reunions } from '../prochainesréunions/reunions';
+
+
+
 const InscriptionForm = (props) => {
 
 
@@ -24,7 +27,7 @@ const InscriptionForm = (props) => {
 	const [mail, setMail] = useState("");
 	const { register, formState: { errors }, handleSubmit } = useForm();
 	const [isOpen, setIsOpen] = useState(false)
-	const [nom, SetNom] = useState('')
+	const [nom, setNom] = useState('')
 	const [prenom, setprenom] = useState('')
 	const [email, setemail] = useState('')
 	const [tel, settel] = useState('')
@@ -63,13 +66,13 @@ const InscriptionForm = (props) => {
 			});
 	};
 
-	
+
 
 
 
 	return (
 		<>
-		
+
 			<motion.form
 				id="myform"
 				// whileHover={{ scale: 0.95 }}
@@ -108,6 +111,9 @@ const InscriptionForm = (props) => {
 							shouldUnregister: false,
 						})}
 						placeholder="Nom *"
+						onChange={(e) => {
+							setNom(e.target.value)
+						}}
 					/>
 
 					{/** Show an error message under the input if the field does not respect validation rules */}
@@ -123,6 +129,9 @@ const InscriptionForm = (props) => {
 							required: '* Ce champs est requis'
 						})}
 						placeholder="Prénom *"
+						onChange={(e) => {
+							setprenom(e.target.value)
+						}}
 					/>
 
 					<ErrorMessage
@@ -141,6 +150,9 @@ const InscriptionForm = (props) => {
 							}
 						})}
 						placeholder="Telephone *"
+						onChange={(e) => {
+							settel(e.target.value)
+						}}
 					/>
 					<ErrorMessage
 						errors={errors}
@@ -196,7 +208,7 @@ const InscriptionForm = (props) => {
 					<button type="submit" className='envoyer-btn' form="myform" onClick={() => {
 						validate()
 						setIsOpen(true)
-						
+
 					}}>Je m'inscris</button>
 					{isOpen && !nom && !prenom && !email && !tel ? <Modal open={isOpen} onClose={() => setIsOpen(false)}>
 						Veuillez remplir tous les champs.

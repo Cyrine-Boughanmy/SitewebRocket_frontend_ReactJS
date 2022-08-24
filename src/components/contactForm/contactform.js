@@ -1,29 +1,12 @@
-import { React, useState } from 'react';
-import InscriptionForm from '../homepage/header/inscriptionform';
-import Modal from '../modal/Modal';
-
+import { React} from 'react';
 import './Contact.css';
-
 import Form from './form';
-{/*import { Grid } from '@material-ui/core';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';}
-
-import axios from 'axios';
-import { data } from 'jquery';*/}
-
-
-
 
 
 /** Components */
 const Formulaire = () => {
 
-	
+
 
 	return (
 		<div className='contact-section' id="contactform">
@@ -39,17 +22,13 @@ const Formulaire = () => {
 					<p> ..............</p>
 				</div>
 				<div className='contact-form'>
-				{/* <Form/> */}
-				<Form/>
-				
+					{/* <Form/> */}
+					<Form />
+
 				</div>
 			</div>
+
 			
-			{/*<a href='/'>
-			<div className='contact-logo'>
-					<img src={contactlogoimg} alt='logo'  />
-			</div>
-	</a>*/}
 		</div>
 
 	);

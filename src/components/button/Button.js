@@ -6,7 +6,7 @@ const STYLES = ['btn--primary'];
 
 const SIZES = ['btn--medium', 'btn--large', 'btn--mobile', 'btn--wide'];
 
-const COLOR = ['primary', 'lightblue', 'white','blue'];
+const COLOR = ['primary', 'lightblue', 'white', 'blue'];
 
 export const Button = ({
   children,
@@ -26,7 +26,7 @@ export const Button = ({
 
   return (
     <motion.button
-    whileHover={{scale : 1.15}}
+      whileHover={{ scale: 1.15 }}
       className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
       onClick={onClick}
       type={type}
