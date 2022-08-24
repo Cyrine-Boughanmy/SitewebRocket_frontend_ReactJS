@@ -100,10 +100,7 @@ const Stackdedeveloppement = () => {
                     {stack.map((item) => (
                       <>
                         <motion.div 
-                        aria-owns={open ? 'mouse-over-popover' : undefined}
-                        aria-haspopup="true"
-                        onMouseEnter={handlePopoverOpen}
-                        onMouseLeave={handlePopoverClose}
+                        
                         whileHover={{scale : 1.15}}
                         className='card'>
                         <div className='card-top'>
