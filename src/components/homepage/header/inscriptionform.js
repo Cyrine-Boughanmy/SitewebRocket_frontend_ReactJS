@@ -53,7 +53,8 @@ const InscriptionForm = (props) => {
 
 		await axios
 			.post(
-				'http://localhost:8000/formulaire_reunion_info/liste/',
+				// 'http://localhost:8000/formulaire_reunion_info/liste/',
+				"https://rocket-coding-site-back.herokuapp.com/formulaire_reunion_info/liste/",
 				{ ...data } // {...data, message: "...."}
 
 			)
